@@ -38,6 +38,8 @@
 		<property name="mappingLocations">
 			<list>
 				<value>classpath:com/news/entity/Topic.hbm.xml</value>
+				<value>classpath:com/news/entity/Admin.hbm.xml</value>
+				<value>classpath:com/news/entity/NewsInfo.hbm.xml</value>
 			</list>
 		</property>
 	</bean>
@@ -58,8 +60,16 @@
     	<aop:advisor advice-ref="txAdvice" pointcut-ref="bizMethods"/>
     </aop:config>
 	
+	<!-- Spring Bean -->
+	<bean id="newsInfoDAO" class="com.news.dao.impl.NewsInfoDAOImpl" autowire="byName"></bean>
+	<bean id="topicDAO" class="com.news.dao.impl.TopicDAOImpl" autowire="byName"></bean>
+	<bean id="newsInfoBiz" class="com.news.biz.impl.NewsInfoBizImpl" autowire="byName"></bean>
+	<bean id="topicBiz" class="com.news.biz.impl.TopicBizImpl" autowire="byName"></bean>
+	
+	
 	<!-- spring管理的自定义filter -->  
-      
-    <!-- spring管理struts2的Action -->  
+    
+    <!-- spring管理struts2的Action -->
+    <bean id="newsInfoAction" class="com.news.action.NewsInfoAction" scope="prototype" autowire="byName"></bean>
 
 </beans>

@@ -1,0 +1,16 @@
+/**
+ * Ryougi Global Css
+ */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {
+    padding: 0;
+    margin: 0;
+    font:14px/1 Helvetica,Arial,sans-serif,"Times New Roman","Microsoft YaHe","Sim sun","微软雅黑","宋体";
+}
+* a {text-decoration: none; color: rgb(255,255,255)}
+a:hover {color: rgb(33, 150, 243)}
+ul {-webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 0px;}
+li {list-style: none; }

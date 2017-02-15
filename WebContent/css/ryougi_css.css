@@ -1,0 +1,38 @@
+/**
+ * Ryougi css
+ */
+#main_container {width: 100%; min-width: 1000px; background: url(../img/Tsukihime.full.1277383.jpg) no-repeat; background-size: cover;
+		transition:background 2s ease-in-out; -moz-transition:background 2s ease-in-out; 
+		-webkit-transition:background 2s ease-in-out; -o-transition:background 2s ease-in-out; }
+
+/* Banner Css Start*/
+#banner {height: 120px; background: rgba(0, 0, 0, 0.4); }
+#banner_logo {width:400px; height: 120px; background: url(../img/ryougi_logo.png) no-repeat 50% 60%; background-size: 80%; float: left; }
+#banner_nav > ul > li {width: 120px; height: 120px; position: relative; line-height: 120px; text-align: center; color: #ffffff; font-size: 48px; 
+        float: left }
+#banner_nav a {width: 100%;}
+#banner_nav > ul > li:hover {background: rgba(255, 255, 255, 0.1)}
+#banner_nav > ul > li > .banner_nav_level2 {display: none; opacity: 0; width: 240px; position: absolute; left: 0; top: 120px; background: rgba(0, 0, 0, 0.4)}
+#banner_nav > ul > li > .banner_nav_level2 > li {width: 120px; height: 48px; line-height: 48px; font-size: 28px; text-align: center; float: left; }
+#banner_nav > ul > li > .banner_nav_level2 > li:hover {background: rgba(255, 255, 255, 0.1)}
+#banner_nav > ul > .banner_nav_level1_item:hover > .banner_nav_level2 {display: block; transition:opacity .5s; transition-delay: .1s; 
+        -moz-transition:opacity .5s; -moz-transition-delay: .1s;  -webkit-transition:opacity .5s; -webkit-transition-delay: 10s; -o-transition:opacity .5s; 
+        -o-transition-delay: .1s; opacity: 1.0;}
+#banner_nav > ul > li > .banner_nav_level2 > li > a:hover {color: rgb(33, 150, 243)}
+
+/* Main Css Start*/
+#main_block {float: left; }
+#main_block > div > ul > li:hover {opacity: 0.75;}
+#main_block_lefttop {width: 244px; height: 244px;}
+#main_block_righttop {float: right; width: 480px; height: 242px; background: rgba(255, 255, 255, 0.8); padding: 0 3px 0 3px; margin: 0 2px 0 0;}
+#main_block_righttop_last {border: none !important;}
+.main_block_square > ul > li {width: 120px; height: 120px; line-height: 120px; text-align: center; font-size: 28px; color: #ffffff; margin: 0 2px 2px 0; background: rgba(33, 150, 243, 0.8)}
+#main_block_lefttop > ul > li {float: left; }
+#main_block_righttop > ul > li {height: 48px; border-bottom: #cccccc 1px dashed; color: #000000; line-height: 48px; font-size: 18px;}
+#main_block_righttop > ul > li > b {font-size: 20px; color: rgb(33, 150, 243);}
+#main_block_bottom > ul > li {float: left; margin-top: 12px;}
+#main_block_bottom_left2 {margin-right: 12px;}
+
+/* Footer Css Begin*/
+#footer {height: 60px; background: rgba(0, 0, 0, 0.9); }
+#footer > div {width: 100%; height: 30px; line-height: 30px; text-align: center; font-size: 16px; font-style: normal; color: #ffffff;}
