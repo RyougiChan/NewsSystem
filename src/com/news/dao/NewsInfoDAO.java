@@ -15,4 +15,7 @@ public interface NewsInfoDAO {
 	/** 根据条件和指定页吗获取新闻数目 */
 	Integer getCountOfNewsInfo (NewsInfo condition);
 	
+	/** 根据新闻编号id获取新闻 */
+	NewsInfo getNewsInfoById (int id);
+	
 }

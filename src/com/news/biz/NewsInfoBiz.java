@@ -14,4 +14,6 @@ public interface NewsInfoBiz {
 	List<?> getNewsInfoByConditionAndPage (NewsInfo condition, int page, int pageSize);
 	
 	Pager getPagerOfNewsInfo (NewsInfo condition, int pageSize);
+	
+	NewsInfo getNewsInfoById (int id);
 }

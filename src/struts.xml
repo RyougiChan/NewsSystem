@@ -19,6 +19,9 @@
 		<action name="index" class="newsInfoAction" method="index">  
             <result name="index">/index.jsp</result>
         </action>
+        <action name="newsread" class="newsInfoAction" method="newsRead">  
+            <result name="news_read">/new_read.jsp</result>
+        </action>
 	</package>
 
 </struts>

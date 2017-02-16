@@ -42,4 +42,9 @@ public class NewsInfoBizImpl implements NewsInfoBiz {
 		return pager;
 	}
 
+	@Override
+	public NewsInfo getNewsInfoById(int id) {
+		return newsInfoDAO.getNewsInfoById(id);
+	}
+
 }

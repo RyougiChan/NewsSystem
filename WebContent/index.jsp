@@ -51,10 +51,13 @@
 		</div>
 		<div id="main">
 			<div id="main_pager">
-				<a id="first" href="">First</a>
-				<a id="pre" href="">Previous</a>
-				<a id="next" href="">Next</a>
-				<a id="last" href="">Last</a>
+				<s:if test="pager.curPage > 1">
+					<a id="first" href="index?page.curPage=1&newsInfo.topic.id=${requestScope.newsInfo.topic.id}">First</a>
+					<a id="pre" href="index?page.curPage=${pager.curPage - 1}&newsInfo.topic.id=${requestScope.newsInfo.topic.id}">Previous</a>
+				</s:if><s:if test="pager.curPage < pager.pageCount">
+					<a id="next" href="index?page.curPage=${pager.curPage - 1}&newsInfo.topic.id=${requestScope.newsInfo.topic.id}">Next</a>
+					<a id="last" href="index?page.curPage=${pager.pageCount}&newsInfo.topic.id=${requestScope.newsInfo.topic.id}">Last</a>
+				</s:if>
 			</div>
 			<div id="main_block">
 				<div class="main_block_list" id="main_block_righttop">
@@ -102,16 +105,23 @@
 	<script type="text/javascript" src="js/ryougi_bg.js"></script>
 	<script type="text/javascript" src="js/jquery-3.1.0.js"></script>
 	<script type="text/javascript">
-		$(document).ready(function() {
+		/* $(document).ready(function () {
+			loadListData();
+		}); */
+		$(window).on("unload", function() {
+			loadListData();
+		});
+		var loadListData = function () {
 			console.log("加载完");
 			if ($("#main_block_righttop > ul").children().length === 0) {
 				console.log("空列表，加载数据");
 				$("#indexForm").submit();
+				console.log("加载完毕");
 			} else {
 				console.log("列表已加载，不再发送请求");
 			}
 			console.log("完毕");
-		});
+		}
 	</script>
 </body>
 </html>

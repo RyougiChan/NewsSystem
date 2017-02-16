@@ -10,6 +10,7 @@ import com.news.biz.TopicBiz;
 import com.news.entity.NewsInfo;
 import com.news.entity.Pager;
 import com.opensymphony.xwork2.ActionSupport;
+import com.sun.xml.internal.bind.v2.model.core.ID;
 
 public class NewsInfoAction extends ActionSupport implements RequestAware {
 	
@@ -18,6 +19,7 @@ public class NewsInfoAction extends ActionSupport implements RequestAware {
 	TopicBiz topicBiz;
 	NewsInfoBiz newsInfoBiz;
 	Pager pager;
+	int id;
 	
 	public Map<String, Object> getRequest() {
 		return request;
@@ -59,6 +61,14 @@ public class NewsInfoAction extends ActionSupport implements RequestAware {
 		this.pager = pager;
 	}
 	
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
 	/**
 	 * Get news list according to the query condition and page,
 	 * And then dispatch to index page.
@@ -75,23 +85,25 @@ public class NewsInfoAction extends ActionSupport implements RequestAware {
 		}
 		
 		if (newsInfo == null) {
-			newsInfos = (List<NewsInfo>) newsInfoBiz.getAllNewsInfoByPage(curPage, 10);
-			pager = newsInfoBiz.getPagerOfAllNewsInfo(10);
+			newsInfos = (List<NewsInfo>) newsInfoBiz.getAllNewsInfoByPage(curPage, 5);
+			pager = newsInfoBiz.getPagerOfAllNewsInfo(5);
 		} else {
-			newsInfos = (List<NewsInfo>) newsInfoBiz.getNewsInfoByConditionAndPage(newsInfo, curPage, 10);
-			pager = newsInfoBiz.getPagerOfNewsInfo(newsInfo, 10);
+			newsInfos = (List<NewsInfo>) newsInfoBiz.getNewsInfoByConditionAndPage(newsInfo, curPage, 5);
+			pager = newsInfoBiz.getPagerOfNewsInfo(newsInfo, 5);
 		}
 
-		System.out.println("DEBUG --------------------------------- ");
-		System.out.println(newsInfos.size());
-		for (NewsInfo newsInfo : newsInfos) {
-			System.out.println(newsInfo.toString());
-		}
 		pager.setCurPage(curPage);
 		request.put("newsInfoList", newsInfos);
 		request.put("topicList", topicBiz.getAllTopics());
+		request.put("pager", pager);
 		
 		return "index";
+	}
+	
+	public String newsRead() throws Exception {
+		NewsInfo newsInfo = newsInfoBiz.getNewsInfoById(id);
+		request.put("newsInfo", newsInfo);
+		return "news_read";
 	}
 	
 }

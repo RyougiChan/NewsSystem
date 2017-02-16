@@ -31,7 +31,7 @@
 #main_block_righttop_last {border: none !important;}
 .main_block_square > ul > li {width: 120px; height: 120px; line-height: 120px; text-align: center; font-size: 28px; color: #ffffff; margin: 0 2px 2px 0; background: rgba(33, 150, 243, 0.8)}
 #main_block_lefttop > ul > li {float: left; }
-#main_block_righttop > form > ul > li {position: relative; height: 47px; border-bottom: #cccccc 1px dashed; color: #000000; line-height: 48px; font-size: 18px;}
+#main_block_righttop > form > ul > li {position: relative; height: 48px; border-bottom: #cccccc 1px dashed; color: #000000; line-height: 48px; font-size: 18px;}
 #main_block_righttop a {width: 80%; display: block; color: #000000; overflow:hidden; white-space: nowrap; text-overflow: ellipsis;}
 #main_block_righttop a:hover {color: rgb(33, 150, 243);}
 #main_block_righttop span {position: absolute; right: 2px}

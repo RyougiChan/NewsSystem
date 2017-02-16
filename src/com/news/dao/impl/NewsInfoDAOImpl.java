@@ -69,4 +69,11 @@ public class NewsInfoDAOImpl implements NewsInfoDAO {
 		return criteria.list().size();
 	}
 
+	@Override
+	public NewsInfo getNewsInfoById(int id) {
+		Session session = SessionFactory.openSession();
+		NewsInfo newsInfo = (NewsInfo) session.get(NewsInfo.class, id);
+		return newsInfo;
+	}
+
 }
