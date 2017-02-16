@@ -8,6 +8,8 @@
 	<constant name="struts.i18n.encoding" value="utf-8"></constant>
 	<!-- 将Action的创建交给spring来管理 -->
 	<constant name="struts.objectFactory" value="spring" />
+	<!-- 指定标签为简单标签 -->
+	<constant name="struts.ui.theme" value="simple" />
 	<!-- 更改struts2请求Action的后缀名，默认为action。若想去掉后缀，设为""即可
 	<constant name="struts.action.extension" value=""></constant> -->
 	<!-- 配置拦截器 --> 

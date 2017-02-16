@@ -56,8 +56,8 @@
 					<s:form id="indexForm" action="index">
 						<ul>
 							<s:iterator id="news" value="#request.newsInfoList">
-								<li><b><a href="newsread?id=${news.id}">❅
-											${news.title}</a></b> <span>${news.createDate}</span></li>
+								<li><b>❅ </b><a href="newsread?id=${news.id}">
+											${news.title}</a> <span><s:date name="%{#news.createDate}" format="yy-MM-dd" /></span></li>
 							</s:iterator>
 						</ul>
 					</s:form>
@@ -102,6 +102,8 @@
 			if ($("#main_block_righttop > ul").children().length === 0) {
 				console.log("空列表，加载数据");
 				$("#indexForm").submit();
+			} else {
+				console.log("列表已加载，不再发送请求");
 			}
 			console.log("完毕");
 		});

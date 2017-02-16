@@ -31,8 +31,8 @@
 #main_block_righttop_last {border: none !important;}
 .main_block_square > ul > li {width: 120px; height: 120px; line-height: 120px; text-align: center; font-size: 28px; color: #ffffff; margin: 0 2px 2px 0; background: rgba(33, 150, 243, 0.8)}
 #main_block_lefttop > ul > li {float: left; }
-#main_block_righttop > ul > li {height: 48px; border-bottom: #cccccc 1px dashed; color: #000000; line-height: 48px; font-size: 18px;}
-#main_block_righttop > ul > li > b {font-size: 20px; color: rgb(33, 150, 243);}
+#main_block_righttop > form > ul > li {height: 48px; border-bottom: #cccccc 1px dashed; color: #000000; line-height: 48px; font-size: 18px;}
+#main_block_righttop > form > ul > li > b {font-size: 20px; color: rgb(33, 150, 243);}
 #main_block_bottom > ul > li {float: left; margin-top: 12px;}
 #main_block_bottom_left2 {margin-right: 12px;}
 

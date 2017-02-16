@@ -3,13 +3,15 @@ package com.news.action;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.struts2.interceptor.RequestAware;
+
 import com.news.biz.NewsInfoBiz;
 import com.news.biz.TopicBiz;
 import com.news.entity.NewsInfo;
 import com.news.entity.Pager;
 import com.opensymphony.xwork2.ActionSupport;
 
-public class NewsInfoAction extends ActionSupport {
+public class NewsInfoAction extends ActionSupport implements RequestAware {
 	
 	Map<String, Object> request;
 	NewsInfo newsInfo;
