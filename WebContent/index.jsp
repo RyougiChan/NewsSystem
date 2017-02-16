@@ -96,7 +96,7 @@
 					href="mailto:ryougi.chan.fire@gmail.com">ryougi.chan.fire@gmail.com</a>
 			</div>
 			<div class="contact">
-				Technic: <a href="">RyougiChan </a> <a href="">Management</a> &nbsp;
+				Technic: <a href="">RyougiChan </a> <a href="login.jsp">Management</a> &nbsp;
 				| &nbsp;Copyright © <a href="">RyougiChan</a>
 			</div>
 		</div>

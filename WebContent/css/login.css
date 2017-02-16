@@ -19,6 +19,7 @@ body {height: 100%; background: url("../img/Tsukihime.full.1277383.jpg") no-repe
 	#loginNotice div {font-size: 18px; }
 	#loginForm {width: 50%; background: #f1f1f1; height: 480px;}
 	#loginForm > form {padding-left: 20%; padding-top: 100px; height: 320px; width: 60%;}
+	#loginForm > form > h1 {font-size: 36px; font-weight: bold; color: rgb(33, 150, 243)}
 	#loginForm > form > p {font-size: 18px; font-weight: bold; margin-top: 10px;}
 	#loginForm > form > div {padding-top: 10px; font-weight: bold; width: 100%}
 	#loginForm > form > div > input {height: 36px; width: 100%; font-size: 18px; font-weight: bold;}

@@ -3,11 +3,13 @@ package com.news.action;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.struts2.interceptor.SessionAware;
+
 import com.news.biz.AdminBiz;
 import com.news.entity.Admin;
 import com.opensymphony.xwork2.ActionSupport;
 
-public class AdminAction extends ActionSupport {
+public class AdminAction extends ActionSupport implements SessionAware {
 	
 	Map<String, Object> session;
 	AdminBiz adminBiz;

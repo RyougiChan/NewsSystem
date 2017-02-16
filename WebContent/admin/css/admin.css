@@ -1,0 +1,8 @@
+/* Top S */
+#top {width: 100%; height: 100%; background: lightblue; border-bottom: #00aaff 4px solid}
+
+/* Left S */
+#left {width: 100%; height: 100%; background: lightcoral; border-right: #00aaff 4px solid}
+
+/* Right S */
+#right {width: 100%; height: 100%; background: lightpink;}

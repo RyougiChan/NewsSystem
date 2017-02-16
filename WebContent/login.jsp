@@ -36,6 +36,8 @@
 				</div>
 				<div id="loginForm">
 					<form action="adminLogin" method="post">
+						<h1>内容管理系统</h1><br>
+						<h2>Content Manage System</h2><br>
 						<p>User</p>
 						<div>
 							<input id="loginName" name="loginName" type="text" />

@@ -22,6 +22,7 @@ public class AdminDAOImpl implements AdminDAO {
 	public List<?> search(Admin admin) {
 		Session session = sessionFactory.openSession();
 		Criteria c = session.createCriteria(Admin.class);
+		
 		// 创建示例条件
 		Example example = Example.create(admin);
 		c.add(example);
