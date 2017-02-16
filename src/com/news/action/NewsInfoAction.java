@@ -82,9 +82,11 @@ public class NewsInfoAction extends ActionSupport implements RequestAware {
 			pager = newsInfoBiz.getPagerOfNewsInfo(newsInfo, 10);
 		}
 
-		System.out.println("DEBUG --------- ");
+		System.out.println("DEBUG --------------------------------- ");
 		System.out.println(newsInfos.size());
-		System.out.println(newsInfos);
+		for (NewsInfo newsInfo : newsInfos) {
+			System.out.println(newsInfo.toString());
+		}
 		pager.setCurPage(curPage);
 		request.put("newsInfoList", newsInfos);
 		request.put("topicList", topicBiz.getAllTopics());

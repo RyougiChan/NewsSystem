@@ -22,6 +22,7 @@
     var mainContainer = document.getElementById('main_container');
     var main = document.getElementById('main');
     var mainBlock = document.getElementById('main_block');
+    var mainPager = document.getElementById('main_pager');
     /*
     Resize event function
     */
@@ -41,10 +42,12 @@
     mainContainer.style.height = windowInnerHeight.toString() + "px";
     main.style.height = (window.innerHeight - 180).toString() + "px";
     mainBlock.style.margin = ((window.innerHeight - 554)/2).toString() + "px" + " 0" + " 0 " + ((window.innerWidth - 740)/2).toString() + "px";
+    mainPager.style.margin = ((window.innerHeight - 554)/2).toString() + "px " + ((window.innerWidth - 740)/2 - 120).toString() + "px" + " 0 " + " 0";
     addEvent(window, "resize", function (event) {
         mainContainer.style.height = (window.innerHeight).toString() + "px";
         main.style.height = (window.innerHeight - 180).toString() + "px";
         mainBlock.style.margin = ((window.innerHeight - 554)/2).toString() + "px" + " 0" + " 0 " + ((window.innerWidth - 740)/2).toString() + "px";
+        mainPager.style.margin = ((window.innerHeight - 554)/2).toString() + "px " + ((window.innerWidth - 740)/2 - 120).toString() + "px" + " 0 " + " 0";
     });
     
 })();

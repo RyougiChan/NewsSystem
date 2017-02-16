@@ -50,14 +50,19 @@
 			</div>
 		</div>
 		<div id="main">
-			<form></form>
+			<div id="main_pager">
+				<a id="first" href="">First</a>
+				<a id="pre" href="">Previous</a>
+				<a id="next" href="">Next</a>
+				<a id="last" href="">Last</a>
+			</div>
 			<div id="main_block">
 				<div class="main_block_list" id="main_block_righttop">
 					<s:form id="indexForm" action="index">
 						<ul>
 							<s:iterator id="news" value="#request.newsInfoList">
-								<li><b>❅ </b><a href="newsread?id=${news.id}">
-											${news.title}</a> <span><s:date name="%{#news.createDate}" format="yy-MM-dd" /></span></li>
+								<li><a href="newsread?id=${news.id}"><b>❅ </b>
+											${news.title} <span><s:date name="%{#news.createDate}" format="yy-MM-dd" /></span></a>  </li>
 							</s:iterator>
 						</ul>
 					</s:form>

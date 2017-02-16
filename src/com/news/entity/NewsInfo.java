@@ -95,4 +95,12 @@ public class NewsInfo implements java.io.Serializable {
 		this.summary = summary;
 	}
 
+	@Override
+	public String toString() {
+		return "NewsInfo [id=" + id + ", topic=" + topic + ", title=" + title + ", author=" + author + ", createDate="
+				+ createDate + ", content=" + content + ", summary=" + summary + "]";
+	}
+	
+	
+
 }

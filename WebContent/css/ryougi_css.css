@@ -1,4 +1,4 @@
-/**
+**
  * Ryougi css
  */
 #main_container {width: 100%; min-width: 1000px; background: url(../img/Tsukihime.full.1277383.jpg) no-repeat; background-size: cover;
@@ -21,6 +21,9 @@
 #banner_nav > ul > li > .banner_nav_level2 > li > a:hover {color: rgb(33, 150, 243)}
 
 /* Main Css Start*/
+#main_pager {float: right; width: 100px;}
+#main_pager > a {display: block; width: 100%; font-size: 18px;height: 36px; line-height: 36px; text-align: center;background: rgb(33, 150, 243); margin-bottom: 10px; }
+#main_pager > a:hover {color: rgba(240, 240, 240, 0.8);}
 #main_block {float: left; }
 #main_block > div > ul > li:hover {opacity: 0.75;}
 #main_block_lefttop {width: 244px; height: 244px;}
@@ -28,9 +31,10 @@
 #main_block_righttop_last {border: none !important;}
 .main_block_square > ul > li {width: 120px; height: 120px; line-height: 120px; text-align: center; font-size: 28px; color: #ffffff; margin: 0 2px 2px 0; background: rgba(33, 150, 243, 0.8)}
 #main_block_lefttop > ul > li {float: left; }
-#main_block_righttop > form > ul > li {height: 48px; border-bottom: #cccccc 1px dashed; color: #000000; line-height: 48px; font-size: 18px;}
-#main_block_righttop a {color: #000000;}
-#main_block_righttop span {position: absolute; right: 0; margin-right: 0;}
+#main_block_righttop > form > ul > li {position: relative; height: 47px; border-bottom: #cccccc 1px dashed; color: #000000; line-height: 48px; font-size: 18px;}
+#main_block_righttop a {width: 80%; display: block; color: #000000; overflow:hidden; white-space: nowrap; text-overflow: ellipsis;}
+#main_block_righttop a:hover {color: rgb(33, 150, 243);}
+#main_block_righttop span {position: absolute; right: 2px}
 #main_block_righttop b {font-size: 20px; color: rgb(33, 150, 243);}
 #main_block_bottom > ul > li {float: left; margin-top: 12px;}
 #main_block_bottom_left2 {margin-right: 12px;}
