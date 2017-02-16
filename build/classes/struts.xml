@@ -22,6 +22,10 @@
         <action name="newsread" class="newsInfoAction" method="newsRead">  
             <result name="news_read">/new_read.jsp</result>
         </action>
+        <action name="adminLogin" class="adminAction" method="validateLogin">  
+            <result name="index" type="redirectAction">index</result>
+        </action>
+        
 	</package>
 
 </struts>

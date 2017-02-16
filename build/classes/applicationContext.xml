@@ -65,11 +65,14 @@
 	<bean id="topicDAO" class="com.news.dao.impl.TopicDAOImpl" autowire="byName"></bean>
 	<bean id="newsInfoBiz" class="com.news.biz.impl.NewsInfoBizImpl" autowire="byName"></bean>
 	<bean id="topicBiz" class="com.news.biz.impl.TopicBizImpl" autowire="byName"></bean>
+	<bean id="adminDAO" class="com.news.dao.impl.AdminDAOImpl" autowire="byName"></bean>
+	<bean id="adminBiz" class="com.news.biz.impl.AdminBizImpl" autowire="byName"></bean>
 	
 	
 	<!-- spring管理的自定义filter -->  
     
     <!-- spring管理struts2的Action -->
     <bean id="newsInfoAction" class="com.news.action.NewsInfoAction" scope="prototype" autowire="byName"></bean>
+	<bean id="adminAction" class="com.news.action.AdminAction" scope="prototype" autowire="byName"></bean>
 
 </beans>

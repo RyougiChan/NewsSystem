@@ -1,0 +1,38 @@
+/* global css */
+body {height: 100%; background: url("../img/Tsukihime.full.1277383.jpg") no-repeat; background-size: cover;}
+
+/* login css S */
+#main_container {background: rgba(0, 0, 0, 0.5)}
+	/* banner css S */
+	#banner {width: 100%; height: 180px;}
+	#banner_logo {margin: 0 10%; width:400px; height: 120px; background: url(../img/ryougi_logo.png) no-repeat 50% 60%; background-size: 80%; float: left; }
+	#b_desc {width: 100%; height: 120px; line-height: 120px; font-size: 54px; text-align: center; }
+	/* banner css E */
+	/* main css S */
+	/*#main {position: relative; width: 100%; height: 640px; background: lightcyan}*/
+	#main {position: relative; width: 100%;}
+	#loginPane {position: absolute; width: 70%; height: 480px; left: 15%; top: calc(50% - 240px); background: white;}
+	#loginNotice {float: right; width: 50%; height: 480px;}
+	#loginNotice > div {margin: 20% 20%; }
+	#loginNotice > div > h2 {color: rgb(33, 150, 243); font-size: 36px; }
+	#loginNotice > div a {color: rgb(33, 150, 243)}
+	#loginNotice div {font-size: 18px; }
+	#loginForm {width: 50%; background: #f1f1f1; height: 480px;}
+	#loginForm > form {padding-left: 20%; padding-top: 100px; height: 320px; width: 60%;}
+	#loginForm > form > p {font-size: 18px; font-weight: bold; margin-top: 10px;}
+	#loginForm > form > div {padding-top: 10px; font-weight: bold; width: 100%}
+	#loginForm > form > div > input {height: 36px; width: 100%; font-size: 18px; font-weight: bold;}
+	#save {width: auto !important; height: auto !important}
+	#submit {background: rgb(33, 150, 243); border: none; width: 120px; height: 28px; }
+	/* main css E */
+	/* footer css S */
+	#footer {width: 100%; height: 120px;}
+	/* footer css E */
+/* login css E */
+
+/* login_succed css S */
+.notice {width: 100%; text-align: center; font-size: 72px; font-weight: bold; }
+/* login_succed css E */
+
+/* login_failed css S */
+/* login_failed css E */
