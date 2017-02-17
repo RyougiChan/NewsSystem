@@ -47,4 +47,9 @@ public class NewsInfoBizImpl implements NewsInfoBiz {
 		return newsInfoDAO.getNewsInfoById(id);
 	}
 
+	@Override
+	public void addNews(NewsInfo newsInfo) {
+		newsInfoDAO.addNews(newsInfo);
+	}
+
 }

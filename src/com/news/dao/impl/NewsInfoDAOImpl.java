@@ -76,4 +76,10 @@ public class NewsInfoDAOImpl implements NewsInfoDAO {
 		return newsInfo;
 	}
 
+	@Override
+	public void addNews(NewsInfo newsInfo) {
+		Session session = SessionFactory.openSession();
+		session.saveOrUpdate(newsInfo);
+	}
+
 }

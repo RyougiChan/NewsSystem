@@ -4,23 +4,34 @@ import java.util.List;
 import java.util.Map;
 
 import org.apache.struts2.interceptor.RequestAware;
+import org.apache.struts2.interceptor.SessionAware;
 
 import com.news.biz.NewsInfoBiz;
 import com.news.biz.TopicBiz;
+import com.news.entity.Admin;
 import com.news.entity.NewsInfo;
 import com.news.entity.Pager;
 import com.opensymphony.xwork2.ActionSupport;
 import com.sun.xml.internal.bind.v2.model.core.ID;
 
-public class NewsInfoAction extends ActionSupport implements RequestAware {
-	
+public class NewsInfoAction extends ActionSupport implements RequestAware, SessionAware {
+
 	Map<String, Object> request;
+	Map<String, Object> session;
 	NewsInfo newsInfo;
 	TopicBiz topicBiz;
 	NewsInfoBiz newsInfoBiz;
 	Pager pager;
 	int id;
 	
+	public Map<String, Object> getSession() {
+		return session;
+	}
+
+	public void setSession(Map<String, Object> session) {
+		this.session = session;
+	}
+
 	public Map<String, Object> getRequest() {
 		return request;
 	}
@@ -91,10 +102,10 @@ public class NewsInfoAction extends ActionSupport implements RequestAware {
 			newsInfos = (List<NewsInfo>) newsInfoBiz.getNewsInfoByConditionAndPage(newsInfo, curPage, 5);
 			pager = newsInfoBiz.getPagerOfNewsInfo(newsInfo, 5);
 		}
-
+		
 		pager.setCurPage(curPage);
 		request.put("newsInfoList", newsInfos);
-		request.put("topicList", topicBiz.getAllTopics());
+		session.put("topicList", topicBiz.getAllTopics());
 		request.put("pager", pager);
 		
 		return "index";
@@ -104,6 +115,14 @@ public class NewsInfoAction extends ActionSupport implements RequestAware {
 		NewsInfo newsInfo = newsInfoBiz.getNewsInfoById(id);
 		request.put("newsInfo", newsInfo);
 		return "news_read";
+	}
+	
+	public String newsAdd() throws Exception {
+		NewsInfo newsInfo = new NewsInfo();
+		Admin admin = (Admin) session.get("admin");
+		newsInfo.setAuthor(admin.getLoginName());
+		newsInfoBiz.addNews(newsInfo);
+		return "news_add";
 	}
 	
 }

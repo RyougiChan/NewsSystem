@@ -26,6 +26,9 @@
            <!--  <result name="index" type="redirectAction">index</result> -->
             <result name="index" type="redirect">/admin/admin.jsp</result>
         </action>
+        <action name="addNews" class="newsInfoAction" method="newsAdd">  
+            <result name="index">/sub_jsp/news_add.jsp</result>
+        </action>
         
 	</package>
 

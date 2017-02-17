@@ -5,18 +5,17 @@
 
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>后台管理</title>
+        <title>内容管理系统</title>
         <link type="text/css" rel="stylesheet" href="../css/global.css" />
         <link type="text/css" rel="stylesheet" href="css/admin.css" />
     </head>
     <body>
         <div id="left_container">
             <ul id="left_list">
-                <li><a href="jsp/addCategory.jsp" target="right">添加类别</a></li>
-                <li><a href="jsp/queryCategory.jsp" target="right">查询类别</a></li>
-                <li><a href="jsp/addGoods.jsp" target="right">添加商品</a></li>
-                <li>№</li>
-                <li>№</li>
+                <li><a href="sub_jsp/topic_add.jsp" target="right">添加主题</a></li>
+                <li><a href="sub_jsp/topic_edit.jsp" target="right">编辑主题</a></li>
+                <li><a href="sub_jsp/news_add.jsp" target="right">添加新闻</a></li>
+                <li><a href="sub_jsp/news_edit.jsp" target="right">编辑新闻</a></li>
             </ul>
         </div>
     </body>

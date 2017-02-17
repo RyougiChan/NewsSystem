@@ -16,4 +16,6 @@ public interface NewsInfoBiz {
 	Pager getPagerOfNewsInfo (NewsInfo condition, int pageSize);
 	
 	NewsInfo getNewsInfoById (int id);
+	
+	void addNews (NewsInfo newsInfo);
 }
