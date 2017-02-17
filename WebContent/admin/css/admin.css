@@ -1,8 +1,13 @@
-/* Top S */
-#top {width: 100%; height: 100%; background: lightblue; border-bottom: #00aaff 4px solid}
+a {color: #010101}
+/* Top CSS Start */
+#top_container {width: 100%; height: 100%; background: rgba(255, 255, 255, 0.8);}
+#banner_logo {width:200px; height: 60px; background: url(../../img/ryougi_logo.png) no-repeat 50% 60%; background-size: 80%; float: left;     margin-left: 40px;}
+.banner_contact {width: 100%; height: 30px; line-height: 30px; text-align: right; font-size: 16px; font-style: normal; color: #010101;}
 
-/* Left S */
-#left {width: 100%; height: 100%; background: lightcoral; border-right: #00aaff 4px solid}
+/* Left CSS Start */
+#left_container {width: calc(100% - 60px); height: calc(100% - 60px); background: rgba(255, 255, 255, 0.8); position: absolute; left: 60px; top: 30px;}
+#left_list {padding: 20px; }
+#left_list > li {font-size: 16px; height: 28px; line-height: 28px; border-bottom: 1px dashed black;}
 
-/* Right S */
-#right {width: 100%; height: 100%; background: lightpink;}
+/* Right CSS Start */
+#right_container {width: calc(100% - 90px); height: calc(100% - 60px); background: rgba(255, 255, 255, 0.8); position: absolute; left: 30px; top: 30px;}
