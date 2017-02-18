@@ -90,6 +90,9 @@ public class NewsInfoAction extends ActionSupport implements RequestAware, Sessi
 	public String index() throws Exception {
 		int curPage = 1;
 		List<NewsInfo> newsInfos = null;
+		Pager pager8 = null;
+		List<NewsInfo> newsInfos8 = null;
+		
 		
 		if (pager != null) {
 			curPage = pager.getCurPage();
@@ -98,15 +101,21 @@ public class NewsInfoAction extends ActionSupport implements RequestAware, Sessi
 		if (newsInfo == null) {
 			newsInfos = (List<NewsInfo>) newsInfoBiz.getAllNewsInfoByPage(curPage, 5);
 			pager = newsInfoBiz.getPagerOfAllNewsInfo(5);
+			newsInfos8 = (List<NewsInfo>) newsInfoBiz.getAllNewsInfoByPage(curPage, 8);
+			pager8 = newsInfoBiz.getPagerOfAllNewsInfo(8);
 		} else {
 			newsInfos = (List<NewsInfo>) newsInfoBiz.getNewsInfoByConditionAndPage(newsInfo, curPage, 5);
 			pager = newsInfoBiz.getPagerOfNewsInfo(newsInfo, 5);
+			newsInfos8 = (List<NewsInfo>) newsInfoBiz.getNewsInfoByConditionAndPage(newsInfo, curPage, 8);
+			pager8 = newsInfoBiz.getPagerOfNewsInfo(newsInfo, 8);
 		}
-		
+
 		pager.setCurPage(curPage);
+		pager8.setCurPage(curPage);
 		session.put("newsInfoList", newsInfos);
 		session.put("topicList", topicBiz.getAllTopics());
-		session.put("pager", pager);
+		session.put("newsInfoList8", newsInfos8);
+		session.put("pager8", pager8);
 		
 		return "index";
 	}
@@ -123,6 +132,31 @@ public class NewsInfoAction extends ActionSupport implements RequestAware, Sessi
 		newsInfo.setAuthor(admin.getLoginName());
 		newsInfoBiz.addNews(newsInfo);
 		return "news_add";
+	}
+	
+	@SuppressWarnings("unchecked")
+	public String newsQuery() throws Exception {
+		int curPage = 1;
+		Pager pager8 = pager;
+		List<NewsInfo> newsInfos8 = null;
+		
+		
+		if (pager8 != null) {
+			curPage = pager8.getCurPage();
+		}
+		
+		if (newsInfo == null) {
+			newsInfos8 = (List<NewsInfo>) newsInfoBiz.getAllNewsInfoByPage(curPage, 8);
+			pager8 = newsInfoBiz.getPagerOfAllNewsInfo(8);
+		} else {
+			newsInfos8 = (List<NewsInfo>) newsInfoBiz.getNewsInfoByConditionAndPage(newsInfo, curPage, 8);
+			pager8 = newsInfoBiz.getPagerOfNewsInfo(newsInfo, 8);
+		}
+
+		pager8.setCurPage(curPage);
+		session.put("newsInfoList8", newsInfos8);
+		session.put("pager8", pager8);
+		return "news_query";
 	}
 	
 }

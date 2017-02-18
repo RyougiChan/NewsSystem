@@ -27,7 +27,10 @@
             <result name="index" type="redirect">/admin/admin.jsp</result>
         </action>
         <action name="addNews" class="newsInfoAction" method="newsAdd">  
-            <result name="index">/sub_jsp/news_add.jsp</result>
+            <result name="index">/admin/sub_jsp/news_add.jsp</result>
+        </action>
+        <action name="queryNews" class="newsInfoAction" method="newsQuery">  
+            <result name="news_query">/admin/sub_jsp/news_edit.jsp</result>
         </action>
         
 	</package>

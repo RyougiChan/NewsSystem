@@ -20,7 +20,7 @@
 					<p>状态</p>
 					<p>操作</p>
 				</li>
-				<s:iterator id="news" value="#session.newsInfoList">
+				<s:iterator id="news" value="#session.newsInfoList8">
 					<li><p>
 							<a href="newsread?id=${news.id}"> ${news.title}</a>
 						</p>
@@ -35,11 +35,11 @@
 		</div>
 		<div id="right_form">
 			<h1>编辑新闻</h1>
-			<form action="" method="POST">
+			<form action="queryNews" method="POST">
 				<div id="keywords">
-					<div class="label">关键</div>
-					<input type="text" name="keywords" /> <input class="inputBtn"
-						type="submit" value="提交" />
+					<div class="label">关键字</div>
+					<input type="text" name="newsInfo.title" /> <input class="inputBtn"
+						type="submit" value="检索" />
 				</div>
 				<div id="topic">
 					<div class="label">主题</div>
@@ -52,14 +52,5 @@
 	<script type="text/javascript" src="../../js/jquery-3.1.0.js"></script>
 	<script type="text/javascript" src="../../js/jquery.twbsPagination.min.js"></script>
 	<script type="text/javascript" src="../script/admin.js"></script>
-	<script>
-	 $('#pagination').twbsPagination({
-	        totalPages: 35,
-	        visiblePages: 7,
-	        onPageClick: function (event, page) {
-	            $('#page-content').text('Page ' + page);
-	        }
-	    });
-	</script>
 </body>
 </html>

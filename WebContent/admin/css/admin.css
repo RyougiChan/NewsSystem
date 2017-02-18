@@ -23,7 +23,7 @@ b {font-size: 18px; font-weight: bold; color: red;}
 .inputBtn:hover {background: rgba(33, 150, 243, 0.8)}
 .inputBtn:active {background: rgba(33, 150, 243, 0.5)}
 
-#right_list {padding: 20px; float: right; width: 65%; height: calc(100% - 40px); background: gainsboro;}
+#right_list {padding: 20px; float: right; width: 65%; height: calc(100% - 40px); background: rgba(0,0,0,0.1);}
 #right_list > ul {height: 90%; width: 100%;}
 #right_list > ul >li {position: relative; height: 48px; border-bottom: #cccccc 1px dashed; color: #000000; line-height: 48px; font-size: 18px;}
 #right_list > ul >li:first-child p {font-weight: bold;}
