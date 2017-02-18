@@ -13,7 +13,7 @@
 	<context:annotation-config />
 	<!-- 配置sessionFactory -->
 	<bean id="dataSource"
-		class="org.apache.tomcat.dbcp.dbcp.BasicDataSource"
+		class="org.apache.commons.dbcp.BasicDataSource"
 		destroy-method="close">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
 		<property name="url" value="jdbc:mysql://127.0.0.1/newssystem" />

@@ -82,4 +82,10 @@ public class NewsInfoDAOImpl implements NewsInfoDAO {
 		session.saveOrUpdate(newsInfo);
 	}
 
+	@Override
+	public void updateNews(NewsInfo newsInfo) {
+		Session session = SessionFactory.openSession();
+		session.saveOrUpdate(newsInfo);
+	}
+
 }

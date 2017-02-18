@@ -18,4 +18,6 @@ public interface NewsInfoBiz {
 	NewsInfo getNewsInfoById (int id);
 	
 	void addNews (NewsInfo newsInfo);
+	
+	void updateNews (NewsInfo newsInfo);
 }

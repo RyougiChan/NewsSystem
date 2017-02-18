@@ -18,21 +18,21 @@
 			<form action="addNews" method="POST">
 				<div id="title">
 					<div class="label">标题</div>
-					<input type="text" name="newsInfo.title" value="%{#request.newsInfo.title}" /><b> *</b>
+					<input type="text" name="newsInfo.title" /><b> *</b>
 				</div>
 				<div id="topic">
 					<div class="label">主题</div>
-					 <s:select name="newsInfo.topic.id" value="%{#request.newsInfo.topic.id}" list="#session.topicList" listKey="id" listValue="name"></s:select>
+					 <s:select name="newsInfo.topic.id" list="#session.topicList" listKey="id" listValue="name"></s:select>
 				</div>
 				<div id="summary">
 					<div class="label">摘要</div>
 					<textarea name="newsInfo.summary" id="summaryBox" cols="100"
-						rows="5">${newsInfo.summary}</textarea>
+						rows="5"></textarea>
 				</div>
 				<div id="content">
 					<div class="label">内容</div>
 					<textarea name="newsInfo.content" id="contentBox" cols="100"
-						rows="10">${newsInfo.content}</textarea>
+						rows="10"></textarea>
 				</div>
 				<div>
 					<input id="submitBtn" class="inputBtn" type="submit" value="添加" />

@@ -52,4 +52,9 @@ public class NewsInfoBizImpl implements NewsInfoBiz {
 		newsInfoDAO.addNews(newsInfo);
 	}
 
+	@Override
+	public void updateNews(NewsInfo newsInfo) {
+		newsInfoDAO.updateNews(newsInfo);
+	}
+
 }

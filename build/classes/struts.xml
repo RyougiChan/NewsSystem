@@ -22,6 +22,12 @@
         <action name="newsread" class="newsInfoAction" method="newsRead">  
             <result name="news_read">/new_read.jsp</result>
         </action>
+        <action name="newsedit" class="newsInfoAction" method="newsEdit">  
+            <result name="news_edit">/admin/sub_jsp/news_edit.jsp</result>
+        </action>
+        <action name="newsdelete" class="newsInfoAction" method="newsDelete">  
+            <result name="news_delete">/admin/sub_jsp/news_manage.jsp</result>
+        </action>
         <action name="adminLogin" class="adminAction" method="validateLogin">  
            <!--  <result name="index" type="redirectAction">index</result> -->
             <result name="index" type="redirect">/admin/admin.jsp</result>
@@ -30,7 +36,7 @@
             <result name="index">/admin/sub_jsp/news_add.jsp</result>
         </action>
         <action name="queryNews" class="newsInfoAction" method="newsQuery">  
-            <result name="news_query">/admin/sub_jsp/news_edit.jsp</result>
+            <result name="news_query">/admin/sub_jsp/news_manage.jsp</result>
         </action>
         
 	</package>

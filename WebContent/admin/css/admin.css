@@ -28,7 +28,7 @@ b {font-size: 18px; font-weight: bold; color: red;}
 #right_list > ul >li {position: relative; height: 48px; border-bottom: #cccccc 1px dashed; color: #000000; line-height: 48px; font-size: 18px;}
 #right_list > ul >li:first-child p {font-weight: bold;}
 #right_list > ul >li > p {float: left; width: 10%; font-size: 16px; line-height: 48px; text-align: center;}
-#right_list > ul >li > p > a {display: block; width: 90%;font-size: 16px; line-height: 48px; overflow: hidden; white-space: nowrap;text-overflow: ellipsis;}
+#title > a {display: block; width: 90%;font-size: 16px; line-height: 48px; overflow: hidden; white-space: nowrap;text-overflow: ellipsis;}
 #right_list > ul >li > p:first-child {width: 60%; text-align: left;}
 #right_list > ul >li > p:last-child {width: 20%;}
 /* Nav Start */
