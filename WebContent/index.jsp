@@ -63,7 +63,7 @@
 				<div class="main_block_list" id="main_block_righttop">
 					<s:form id="indexForm" action="index">
 						<ul>
-							<s:iterator id="news" value="#request.newsInfoList">
+							<s:iterator id="news" value="#session.newsInfoList">
 								<li><a href="newsread?id=${news.id}"><b>❅ </b>
 											${news.title} <span><s:date name="%{#news.createDate}" format="yy-MM-dd" /></span></a>  </li>
 							</s:iterator>

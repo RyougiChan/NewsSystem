@@ -11,14 +11,33 @@ a {color: #010101}
 
 /* Right CSS Start */
 #right_container {width: calc(100% - 90px); height: calc(100% - 60px); background: rgba(255, 255, 255, 0.8); position: absolute; left: 30px; top: 30px;}
-#right_form {padding: 20px;}
+#right_form {padding: 20px; width: 35%;}
 #right_form > h1 {font-size: 28px; font-weight: bold; color: rgb(33, 150, 243); padding: 10px;}
 #right_form > form div {font-size: 14px; font-weight: bold; padding: 5px; }
 input, textarea, select {border: none; background: rgba(255,255,255,0.8); padding: 5px;}
 b {font-size: 18px; font-weight: bold; color: red;}
 #summary {height: 90px; line-height: 90px;}
-.label {float: left; padding: 1px;}
 #submitBtn {width: 108px; height: 48px;}
-.inputBtn {	width: 100px; height: 40px;	background: rgb(33, 150, 243); color: white; border: none; margin: 0 4px;}
+.label {float: left; padding: 1px;}
+.inputBtn {background: rgb(33, 150, 243); color: white; border: none; margin: 0 4px;}
 .inputBtn:hover {background: rgba(33, 150, 243, 0.8)}
 .inputBtn:active {background: rgba(33, 150, 243, 0.5)}
+
+#right_list {padding: 20px; float: right; width: 65%; height: calc(100% - 40px); background: gainsboro;}
+#right_list > ul {height: 90%; width: 100%;}
+#right_list > ul >li {position: relative; height: 48px; border-bottom: #cccccc 1px dashed; color: #000000; line-height: 48px; font-size: 18px;}
+#right_list > ul >li:first-child p {font-weight: bold;}
+#right_list > ul >li > p {float: left; width: 10%; font-size: 16px; line-height: 48px; text-align: center;}
+#right_list > ul >li > p > a {display: block; width: 90%;font-size: 16px; line-height: 48px; overflow: hidden; white-space: nowrap;text-overflow: ellipsis;}
+#right_list > ul >li > p:first-child {width: 60%; text-align: left;}
+#right_list > ul >li > p:last-child {width: 20%;}
+/* Nav Start */
+#list_nav {height: 10%; margin: 0 auto; text-align:center}
+.pagination{display:inline-block;padding-left:0;margin:10px 0;border-radius:4px}
+.pagination>li{display:inline}
+.pagination>li>a,.pagination>li>span{position:relative;float:left;padding:6px 12px;margin-left:-1px;line-height:1.42857143;color:#337ab7;text-decoration:none;background-color:#fff;border:1px solid #ddd}
+.pagination>li:first-child>a,.pagination>li:first-child>span{margin-left:0;border-top-left-radius:4px;border-bottom-left-radius:4px}
+.pagination>li:last-child>a,.pagination>li:last-child>span{border-top-right-radius:4px;border-bottom-right-radius:4px}.pagination>li>a:focus,.pagination>li>a:hover,.pagination>li>span:focus,.pagination>li>span:hover{z-index:2;color:#23527c;background-color:#eee;border-color:#ddd}.pagination>.active>a,.pagination>.active>a:focus,.pagination>.active>a:hover,.pagination>.active>span,.pagination>.active>span:focus,.pagination>.active>span:hover{z-index:3;color:#fff;cursor:default;background-color:#337ab7;border-color:#337ab7}.pagination>.disabled>a,.pagination>.disabled>a:focus,.pagination>.disabled>a:hover,.pagination>.disabled>span,.pagination>.disabled>span:focus,.pagination>.disabled>span:hover{color:#777;cursor:not-allowed;background-color:#fff;border-color:#ddd}.pagination-lg>li>a,.pagination-lg>li>span{padding:10px 16px;font-size:18px;line-height:1.3333333}.pagination-lg>li:first-child>a,.pagination-lg>li:first-child>span{border-top-left-radius:6px;border-bottom-left-radius:6px}.pagination-lg>li:last-child>a,.pagination-lg>li:last-child>span{border-top-right-radius:6px;border-bottom-right-radius:6px}
+.pagination-sm>li>a,.pagination-sm>li>span{padding:5px 10px;font-size:12px;line-height:1.5}
+.pagination-sm>li:first-child>a,.pagination-sm>li:first-child>span{border-top-left-radius:3px;border-bottom-left-radius:3px}
+.pagination-sm>li:last-child>a,.pagination-sm>li:last-child>span{border-top-right-radius:3px;border-bottom-right-radius:3px}

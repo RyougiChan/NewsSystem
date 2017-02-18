@@ -3,4 +3,5 @@
 	$("#inputBtn").bind("click", function () {
 		
 	});
+	
 })()

@@ -104,16 +104,16 @@ public class NewsInfoAction extends ActionSupport implements RequestAware, Sessi
 		}
 		
 		pager.setCurPage(curPage);
-		request.put("newsInfoList", newsInfos);
+		session.put("newsInfoList", newsInfos);
 		session.put("topicList", topicBiz.getAllTopics());
-		request.put("pager", pager);
+		session.put("pager", pager);
 		
 		return "index";
 	}
 	
 	public String newsRead() throws Exception {
 		NewsInfo newsInfo = newsInfoBiz.getNewsInfoById(id);
-		request.put("newsInfo", newsInfo);
+		session.put("newsInfo", newsInfo);
 		return "news_read";
 	}
 	

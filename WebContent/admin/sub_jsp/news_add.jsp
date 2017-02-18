@@ -6,7 +6,7 @@
 
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title></title>
+<title>添加新闻</title>
 <link type="text/css" rel="stylesheet" href="../../css/global.css" />
 <link type="text/css" rel="stylesheet" href="../css/admin.css" />
 </head>
@@ -34,8 +34,8 @@
 					<textarea name="newsInfo.content" id="contentBox" cols="100"
 						rows="10"></textarea>
 				</div>
-				<div id="submitBtn">
-					<input id="inputBtn" class="inputBtn" type="submit" value="添加" />
+				<div>
+					<input id="submitBtn" class="inputBtn" type="submit" value="添加" />
 				</div>
 			</form>
 		</div>
