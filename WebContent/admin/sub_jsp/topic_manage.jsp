@@ -15,18 +15,14 @@
 		<div id="right_list">
 			<ul>
 				<li>
-					<p>标题</p>
-					<p>更新时间</p>
-					<p>状态</p>
+					<p>主题</p>
 					<p>操作</p>
 				</li>
-				<s:iterator id="news" value="#session.newsInfoList8">
+				<s:iterator id="topic" value="#session.topicList">
 					<li><p>
-							<a href="newsread?id=${news.id}"> ${news.title}</a>
+							<input id="topicName" name="topic.id" value="${topic.name}" type="text" disabled />
 						</p>
-						<p>更新时间</p>
-						<p>已审核</p>
-						<p><a href="newsedit?id=${news.id}">编辑</a> <a href="newsread?id=${news.id}"> 查看</a> <a href="newsdelete?id=${news.id}"> ${news.title}</a></p></li>
+						<p><a onclick="editTopic(${topic.id})"> 编辑 </a> <a onclick="deleteTopic(${topic.id})"> 删除 </a></p></li>
 				</s:iterator>
 			</ul>
 			<div id="list_nav">
@@ -34,17 +30,12 @@
 			</div>
 		</div>
 		<div id="right_form">
-			<h1>编辑新闻</h1>
-			<form action="queryNews" method="POST">
+			<h1>管理主题</h1>
+			<form action="queryTopic" method="POST">
 				<div id="keywords">
 					<div class="label">关键字</div>
-					<input type="text" name="newsInfo.title" /> <input class="inputBtn"
+					<input type="text" name="topic.name" /> <input class="inputBtn"
 						type="submit" value="检索" />
-				</div>
-				<div id="topic">
-					<div class="label">主题</div>
-					<s:select name="newsInfo.topic.id" list="#session.topicList"
-						listKey="id" listValue="name"></s:select>
 				</div>
 			</form>
 		</div>

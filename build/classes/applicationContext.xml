@@ -99,5 +99,6 @@
     <!-- spring管理struts2的Action -->
     <bean id="newsInfoAction" class="com.news.action.NewsInfoAction" scope="prototype" autowire="byName"></bean>
 	<bean id="adminAction" class="com.news.action.AdminAction" scope="prototype" autowire="byName"></bean>
+	<bean id="topicAction" class="com.news.action.TopicAction" scope="prototype" autowire="byName"></bean>
 
 </beans>

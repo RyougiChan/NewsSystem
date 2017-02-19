@@ -12,7 +12,6 @@
     <body>
         <div id="left_container">
             <ul id="left_list">
-                <li><a href="sub_jsp/topic_add.jsp" target="right">添加主题</a></li>
                 <li><a href="sub_jsp/topic_manage.jsp" target="right">编辑主题</a></li>
                 <li><a href="sub_jsp/news_add.jsp" target="right">添加新闻</a></li>
                 <li><a href="sub_jsp/news_manage.jsp" target="right">编辑新闻</a></li>

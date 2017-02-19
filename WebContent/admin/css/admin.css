@@ -11,7 +11,7 @@ a {color: #010101}
 
 /* Right CSS Start */
 #right_container {width: calc(100% - 90px); height: calc(100% - 60px); background: rgba(255, 255, 255, 0.8); position: absolute; left: 30px; top: 30px;}
-#right_form {padding: 20px; width: 35%;}
+#right_form {padding: 20px;}
 #right_form > h1 {font-size: 28px; font-weight: bold; color: rgb(33, 150, 243); padding: 10px;}
 #right_form > form div {font-size: 14px; font-weight: bold; padding: 5px; }
 input, textarea, select {border: none; background: rgba(255,255,255,0.8); padding: 5px;}
@@ -27,9 +27,10 @@ b {font-size: 18px; font-weight: bold; color: red;}
 #right_list > ul {height: 90%; width: 100%;}
 #right_list > ul >li {position: relative; height: 48px; border-bottom: #cccccc 1px dashed; color: #000000; line-height: 48px; font-size: 18px;}
 #right_list > ul >li:first-child p {font-weight: bold;}
-#right_list > ul >li > p {float: left; width: 10%; font-size: 16px; line-height: 48px; text-align: center;}
+#right_list > ul >li > p {float: left; width: 10%; height: 48px; font-size: 16px; line-height: 48px; text-align: center;}
 #title > a {display: block; width: 90%;font-size: 16px; line-height: 48px; overflow: hidden; white-space: nowrap;text-overflow: ellipsis;}
 #right_list > ul >li > p:first-child {width: 60%; text-align: left;}
+#right_list > ul >li > p:first-child > input {background: none; height: 18px; margin: 10px 0;}
 #right_list > ul >li > p:last-child {width: 20%;}
 /* Nav Start */
 #list_nav {height: 10%; margin: 0 auto; text-align:center}

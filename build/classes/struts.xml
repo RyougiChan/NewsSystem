@@ -38,6 +38,15 @@
         <action name="queryNews" class="newsInfoAction" method="newsQuery">  
             <result name="news_query">/admin/sub_jsp/news_manage.jsp</result>
         </action>
+        <action name="queryTopic" class="topicAction" method="topicQuery">  
+            <result name="topic_query">/admin/sub_jsp/topic_manage.jsp</result>
+        </action>
+        <action name="updateTopic" class="topicAction" method="topicUpdate">  
+            <result name="topic_update">/admin/sub_jsp/topic_manage.jsp</result>
+        </action>
+        <action name="deleteTopic" class="topicAction" method="topicDelete">  
+            <result name="topic_delete">/admin/sub_jsp/topic_manage.jsp</result>
+        </action>
         
 	</package>
 
