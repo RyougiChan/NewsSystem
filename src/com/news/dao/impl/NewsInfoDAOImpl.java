@@ -88,4 +88,10 @@ public class NewsInfoDAOImpl implements NewsInfoDAO {
 		session.saveOrUpdate(newsInfo);
 	}
 
+	@Override
+	public void deleteNews(NewsInfo newsInfo) {
+		Session session = SessionFactory.openSession();
+		session.delete(newsInfo);
+	}
+
 }

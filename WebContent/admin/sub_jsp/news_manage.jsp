@@ -28,8 +28,8 @@
 						<p>已审核</p>
 						<p id="operation">
 							<a href="newsedit?id=${news.id}">编辑</a> <a
-								href="newsread?id=${news.id}"> 查看</a> <a
-								href="newsdelete?id=${news.id}"> 删除</a>
+								href="newsread?id=${news.id}"> 查看</a> <a href=""
+								onclick="deleteNews(${news.id})"> 删除</a>
 						</p></li>
 				</s:iterator>
 			</ul>
@@ -54,6 +54,7 @@
 		</div>
 	</div>
 	<script type="text/javascript" src="../../js/jquery-3.1.0.js"></script>
+	<script type="text/javascript" src="../../js/jquerySession.js"></script>
 	<script type="text/javascript"
 		src="../../js/jquery.twbsPagination.min.js"></script>
 	<script type="text/javascript" src="../script/admin.js"></script>

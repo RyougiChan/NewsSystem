@@ -57,4 +57,11 @@ public class NewsInfoBizImpl implements NewsInfoBiz {
 		newsInfoDAO.updateNews(newsInfo);
 	}
 
+	@Override
+	public void deleteNews(NewsInfo newsInfo) {
+		newsInfoDAO.deleteNews(newsInfo);
+	}
+	
+	
+
 }

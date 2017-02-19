@@ -134,6 +134,9 @@ public class NewsInfoAction extends ActionSupport implements RequestAware, Sessi
 	}
 	
 	public String newsDelete() throws Exception {
+		NewsInfo newsInfo = newsInfoBiz.getNewsInfoById(id);
+		newsInfoBiz.deleteNews(newsInfo);
+		session.put("delete", "success");
 		return "news_delete";
 	}
 	

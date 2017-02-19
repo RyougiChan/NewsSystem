@@ -19,5 +19,7 @@ public interface NewsInfoBiz {
 	
 	void addNews (NewsInfo newsInfo);
 	
-	void updateNews (NewsInfo newsInfo);
+	void deleteNews(NewsInfo newsInfo);
+
+	void updateNews(NewsInfo newsInfo);
 }

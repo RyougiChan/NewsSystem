@@ -19,6 +19,8 @@ public interface NewsInfoDAO {
 	NewsInfo getNewsInfoById (int id);
 	/** 添加新闻 */
 	void addNews(NewsInfo newsInfo);
-	
+	/** 更新新闻 */
 	void updateNews(NewsInfo newsInfo);
+	/** 删除新闻 */
+	void deleteNews(NewsInfo newsInfo);
 }
