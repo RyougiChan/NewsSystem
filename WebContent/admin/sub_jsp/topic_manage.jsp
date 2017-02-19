@@ -21,6 +21,7 @@
 				<s:iterator id="topic" value="#session.topicList">
 					<li><p>
 							<input id="topicName" name="topic.id" value="${topic.name}" type="text" disabled />
+							<input id="topicId" value="${topic.id}" type="hidden"/>
 						</p>
 						<p><a onclick="editTopic(${topic.id})"> 编辑 </a> <a onclick="deleteTopic(${topic.id})"> 删除 </a></p></li>
 				</s:iterator>

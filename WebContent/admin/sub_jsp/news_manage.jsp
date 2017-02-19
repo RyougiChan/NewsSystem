@@ -24,7 +24,7 @@
 					<li><p id="title">
 							<a href="newsread?id=${news.id}"> ${news.title}</a>
 						</p>
-						<p>更新时间</p>
+						<p><s:date name="%{#news.createDate}" format="yy-MM-dd" /></p>
 						<p>已审核</p>
 						<p id="operation">
 							<a href="newsedit?id=${news.id}">编辑</a> <a

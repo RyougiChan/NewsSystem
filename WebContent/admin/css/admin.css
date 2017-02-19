@@ -11,8 +11,11 @@ a {color: #010101}
 
 /* Right CSS Start */
 #right_container {width: calc(100% - 90px); height: calc(100% - 60px); background: rgba(255, 255, 255, 0.8); position: absolute; left: 30px; top: 30px;}
-#right_form {padding: 20px;}
+#right_form {padding: 20px; width: calc(35% - 80px);}
 #right_form > h1 {font-size: 28px; font-weight: bold; color: rgb(33, 150, 243); padding: 10px;}
+#right_form > ul {padding: 10px; width: 100%;}
+#right_form > ul > li {margin: 10px 0;}
+#right_form > ul > li > div {width: 100%; height: 60px; line-height: 60px; padding-left: 60px;}
 #right_form > form div {font-size: 14px; font-weight: bold; padding: 5px; }
 input, textarea, select {border: none; background: rgba(255,255,255,0.8); padding: 5px;}
 b {font-size: 18px; font-weight: bold; color: red;}
@@ -32,7 +35,7 @@ b {font-size: 18px; font-weight: bold; color: red;}
 #right_list > ul >li > p:first-child {width: 60%; text-align: left;}
 #right_list > ul >li > p:first-child > input {background: none; height: 18px; margin: 10px 0;}
 #right_list > ul >li > p:last-child {width: 20%;}
-/* Nav Start */
+/* Right List Nav Start */
 #list_nav {height: 10%; margin: 0 auto; text-align:center}
 .pagination{display:inline-block;padding-left:0;margin:10px 0;border-radius:4px}
 .pagination>li{display:inline}
@@ -42,3 +45,10 @@ b {font-size: 18px; font-weight: bold; color: red;}
 .pagination-sm>li>a,.pagination-sm>li>span{padding:5px 10px;font-size:12px;line-height:1.5}
 .pagination-sm>li:first-child>a,.pagination-sm>li:first-child>span{border-top-left-radius:3px;border-bottom-left-radius:3px}
 .pagination-sm>li:last-child>a,.pagination-sm>li:last-child>span{border-top-right-radius:3px;border-bottom-right-radius:3px}
+
+/* Admin index S */
+.admin_account {background: url(../../img/icon.png) no-repeat 0 -1%; background-size: 20%;}
+.admin_group {background: url(../../img/icon.png) no-repeat 0 16%; background-size: 20%;}
+.true_name {background: url(../../img/icon.png) no-repeat 0 33%; background-size: 20%;}
+.login_time {background: url(../../img/icon.png) no-repeat 0 49.5%; background-size: 20%;}
+.login_ip {background: url(../../img/icon.png) no-repeat 0 67%; background-size: 20%;}

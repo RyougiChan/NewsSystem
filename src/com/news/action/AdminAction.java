@@ -3,19 +3,29 @@ package com.news.action;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.struts2.interceptor.RequestAware;
 import org.apache.struts2.interceptor.SessionAware;
 
 import com.news.biz.AdminBiz;
 import com.news.entity.Admin;
 import com.opensymphony.xwork2.ActionSupport;
 
-public class AdminAction extends ActionSupport implements SessionAware {
-	
+public class AdminAction extends ActionSupport implements RequestAware,SessionAware {
+
+	Map<String, Object> request;
 	Map<String, Object> session;
 	AdminBiz adminBiz;
 	private String loginName;
 	private String loginPwd;
 	
+	public Map<String, Object> getRequest() {
+		return request;
+	}
+
+	public void setRequest(Map<String, Object> request) {
+		this.request = request;
+	}
+
 	public Map<String, Object> getSession() {
 		return session;
 	}
@@ -48,6 +58,7 @@ public class AdminAction extends ActionSupport implements SessionAware {
 		this.loginPwd = loginPwd;
 	}
 
+	@SuppressWarnings("unchecked")
 	public String validateLogin() throws Exception {
 		Admin admin = new Admin(loginName, loginPwd);
 		List<Admin> list = (List<Admin>) adminBiz.login(admin);
