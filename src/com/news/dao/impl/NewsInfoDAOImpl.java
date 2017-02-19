@@ -21,7 +21,7 @@ public class NewsInfoDAOImpl implements NewsInfoDAO {
 
 	@Override
 	public List<?> getAllNewsInfoByPage(int page, int pageSize) {
-		Session session = SessionFactory.openSession();
+		Session session = SessionFactory.getCurrentSession();
 		Criteria criteria = session.createCriteria(NewsInfo.class);
 		criteria.setFirstResult(pageSize * (page - 1));
 		criteria.setMaxResults(pageSize);
@@ -31,14 +31,14 @@ public class NewsInfoDAOImpl implements NewsInfoDAO {
 
 	@Override
 	public Integer getCountOfAllNewsInfo() {
-		Session session = SessionFactory.openSession();
+		Session session = SessionFactory.getCurrentSession();
 		Criteria criteria = session.createCriteria(NewsInfo.class);
 		return criteria.list().size();
 	}
 
 	@Override
 	public List<?> getNewsInfoByConditionAndPage(NewsInfo condition, int page, int pageSize) {
-		Session session = SessionFactory.openSession();
+		Session session = SessionFactory.getCurrentSession();
 		Criteria criteria = session.createCriteria(NewsInfo.class);
 		if (condition != null) {
 			if (condition.getTopic() != null && condition.getTopic().getId() != null ) {
@@ -56,7 +56,7 @@ public class NewsInfoDAOImpl implements NewsInfoDAO {
 
 	@Override
 	public Integer getCountOfNewsInfo(NewsInfo condition) {
-		Session session = SessionFactory.openSession();
+		Session session = SessionFactory.getCurrentSession();
 		Criteria criteria = session.createCriteria(NewsInfo.class);
 		if (condition != null) {
 			if (condition.getTopic() != null && condition.getTopic().getId() != null ) {
@@ -71,26 +71,26 @@ public class NewsInfoDAOImpl implements NewsInfoDAO {
 
 	@Override
 	public NewsInfo getNewsInfoById(int id) {
-		Session session = SessionFactory.openSession();
+		Session session = SessionFactory.getCurrentSession();
 		NewsInfo newsInfo = (NewsInfo) session.get(NewsInfo.class, id);
 		return newsInfo;
 	}
 
 	@Override
 	public void addNews(NewsInfo newsInfo) {
-		Session session = SessionFactory.openSession();
+		Session session = SessionFactory.getCurrentSession();
 		session.saveOrUpdate(newsInfo);
 	}
 
 	@Override
 	public void updateNews(NewsInfo newsInfo) {
-		Session session = SessionFactory.openSession();
+		Session session = SessionFactory.getCurrentSession();
 		session.saveOrUpdate(newsInfo);
 	}
 
 	@Override
 	public void deleteNews(NewsInfo newsInfo) {
-		Session session = SessionFactory.openSession();
+		Session session = SessionFactory.getCurrentSession();
 		session.delete(newsInfo);
 	}
 

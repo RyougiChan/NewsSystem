@@ -19,13 +19,13 @@ public class TopicDAOImpl implements TopicDAO {
 	
 	@Override
 	public List<?> getAllTopics() {
-		Session session = sessionFactory.openSession();
+		Session session = sessionFactory.getCurrentSession();
 		return session.createCriteria(Topic.class).list();
 	}
 
 	@Override
 	public Topic getTopicByCondition (Topic topic) {
-		Session session = sessionFactory.openSession();
+		Session session = sessionFactory.getCurrentSession();
 		Criteria c = session.createCriteria(Topic.class);
 		c.add(Restrictions.eq("topic.name", topic.getName()));
 		return (Topic) c.list().get(0);
@@ -33,13 +33,13 @@ public class TopicDAOImpl implements TopicDAO {
 
 	@Override
 	public void updateTopic(Topic topic) {
-		Session session = sessionFactory.openSession();
+		Session session = sessionFactory.getCurrentSession();
 		session.saveOrUpdate(topic);
 	}
 
 	@Override
 	public void deleteTopic(Topic topic) {
-		Session session = sessionFactory.openSession();
+		Session session = sessionFactory.getCurrentSession();
 		session.delete(topic);
 	}
 

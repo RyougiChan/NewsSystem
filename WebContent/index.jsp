@@ -105,23 +105,17 @@
 	<script type="text/javascript" src="js/ryougi_bg.js"></script>
 	<script type="text/javascript" src="js/jquery-3.1.0.js"></script>
 	<script type="text/javascript">
+	
 		$(document).ready(function () {
-			loadListData();
+			var yetVisited = localStorage['visited'];
+		    if (!yetVisited) {
+		    	$("#indexForm").submit();
+		        localStorage['visited'] = "yes";
+		    }
 		});
 		$(window).on("unload", function() {
-			loadListData();
+			$("#indexForm").submit();
 		});
-		var loadListData = function () {
-			console.log("加载完");
-			if ($("#main_block_righttop > ul").children().length === 0) {
-				console.log("空列表，加载数据");
-				$("#indexForm").submit();
-				console.log("加载完毕");
-			} else {
-				console.log("列表已加载，不再发送请求");
-			}
-			console.log("完毕");
-		}
 	</script>
 </body>
 </html>

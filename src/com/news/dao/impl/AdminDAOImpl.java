@@ -20,7 +20,7 @@ public class AdminDAOImpl implements AdminDAO {
 	
 	@Override
 	public List<?> search(Admin admin) {
-		Session session = sessionFactory.openSession();
+		Session session = sessionFactory.getCurrentSession();
 		Criteria c = session.createCriteria(Admin.class);
 		
 		// 创建示例条件
