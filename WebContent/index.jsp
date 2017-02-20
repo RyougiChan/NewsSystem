@@ -65,7 +65,7 @@
 						<ul>
 							<s:iterator id="news" value="#session.newsInfoList">
 								<li><a href="newsread?id=${news.id}"><b>❅ </b>
-											${news.title} <span><s:date name="%{#news.createDate}" format="yy-MM-dd" /></span></a>  </li>
+											${news.title} <span><s:date name="%{#news.createDate}" format="MM-dd-yyyy" /></span></a>  </li>
 							</s:iterator>
 						</ul>
 					</s:form>
@@ -101,21 +101,40 @@
 			</div>
 		</div>
 	</div>
+	<script type="text/javascript" src="js/jquery-3.1.0.js"></script>
 	<script type="text/javascript" src="js/ryougi_js.js"></script>
 	<script type="text/javascript" src="js/ryougi_bg.js"></script>
-	<script type="text/javascript" src="js/jquery-3.1.0.js"></script>
-	<script type="text/javascript">
+	<script>
+ 	$(document).ready(function () {
+		var yetVisited = localStorage['visited'];
+	    if (!yetVisited) {
+	    	$("#indexForm").submit();
+	        localStorage['visited'] = "yes";
+	    }
+	});
 	
-		$(document).ready(function () {
-			var yetVisited = localStorage['visited'];
-		    if (!yetVisited) {
-		    	$("#indexForm").submit();
-		        localStorage['visited'] = "yes";
-		    }
-		});
-		$(window).on("unload", function() {
-			$("#indexForm").submit();
-		});
+	/* $(window).on("unload", function(){
+		localStorage.removeItem('visited');
+		$("#indexForm").submit();
+	}); */
+	
+	window.onbeforeunload = function()
+	{
+	  var n = window.event.screenX - window.screenLeft;
+	  var b = n > document.documentElement.scrollWidth-20;
+	  if(b && window.event.clientY < 0 || window.event.altKey)
+	    {
+		  console.log("关闭");
+		  localStorage.removeItem('visited');
+	    }
+	  else
+	    {
+		  	$("#indexForm").submit();
+	    	console.log("刷新");
+	    }
+	 
+	}
+    
 	</script>
 </body>
 </html>

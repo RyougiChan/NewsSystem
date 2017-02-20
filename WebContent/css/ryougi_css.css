@@ -1,4 +1,4 @@
-**
+/**
  * Ryougi css
  */
 #main_container {width: 100%; min-width: 1000px; background: url(../img/Tsukihime.full.1277383.jpg) no-repeat; background-size: cover;
@@ -33,12 +33,26 @@
 #main_block_lefttop > ul > li {float: left; }
 #main_block_righttop > form > ul > li {position: relative; height: 48px; border-bottom: #cccccc 1px dashed; color: #000000; line-height: 48px; font-size: 18px;}
 #main_block_righttop a {width: 80%; display: block; color: #000000; overflow:hidden; white-space: nowrap; text-overflow: ellipsis;}
-#main_block_righttop a:hover {color: rgb(33, 150, 243);}
+#main_block_righttop a:hover {color: #2196f3;}
 #main_block_righttop span {position: absolute; right: 2px}
 #main_block_righttop b {font-size: 20px; color: rgb(33, 150, 243);}
 #main_block_bottom > ul > li {float: left; margin-top: 12px;}
 #main_block_bottom_left2 {margin-right: 12px;}
 
-/* Footer Css Begin*/
+/* Footer Css Start*/
 #footer {height: 60px; background: rgba(0, 0, 0, 0.9); }
 #footer > div {width: 100%; height: 30px; line-height: 30px; text-align: center; font-size: 16px; font-style: normal; color: #ffffff;}
+
+/* Article Page CSS Start */
+.article_banner {background: darkgray !important}
+.article_main {background: #f2f1eb}
+.article_footer {background: darkgray !important}
+#article {width: 70%; padding: 48px 0; margin: 0 15%;}
+#article_head > time {font-size: 1.5em; line-height: 1.5em; display: block; color: #820000; text-transform: uppercase;}
+#article_head > h1 {font-weight: 400; font-size: 3.2em; line-height: 1.2em; padding: 14px 0;}
+#article_head > p {font-size: 1.25em; line-height: 1.25em; font-style: italic;}
+#article_body {margin: 36px 0; width: 85%; padding-left: 15%;}
+#article_body > span {font-size: 1.5em; line-height: 1.5em; display: block; color: #820000; text-transform: uppercase;}
+#article_body > p {text-indent:2em; line-height: 1.5em; font-size: 1.2em;}
+#article_tags {width: 12%; height: 480px; float: left; margin: 36px 0;}
+#article_tags > a {display: block; margin: 5px 0; background: url("../img/ic_more_white_48dp.png") 50% 0 no-repeat; width: 100%; height: 36px; font-size: 16px; color: white; line-height: 36px; text-indent: 1em; background-size: cover;}
