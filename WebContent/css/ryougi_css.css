@@ -42,11 +42,10 @@
 /* Footer Css Start*/
 #footer {height: 60px; background: rgba(0, 0, 0, 0.9); }
 #footer > div {width: 100%; height: 30px; line-height: 30px; text-align: center; font-size: 16px; font-style: normal; color: #ffffff;}
-
 /* Article Page CSS Start */
-.article_banner {background: darkgray !important}
+.article_banner {background: #7a7a7a !important}
 .article_main {background: #f2f1eb}
-.article_footer {background: darkgray !important}
+.article_footer {background: #7a7a7a !important}
 #article {width: 70%; padding: 48px 0; margin: 0 15%;}
 #article_head > time {font-size: 1.5em; line-height: 1.5em; display: block; color: #820000; text-transform: uppercase;}
 #article_head > h1 {font-weight: 400; font-size: 3.2em; line-height: 1.2em; padding: 14px 0;}
@@ -56,3 +55,7 @@
 #article_body > p {text-indent:2em; line-height: 1.5em; font-size: 1.2em;}
 #article_tags {width: 12%; height: 480px; float: left; margin: 36px 0;}
 #article_tags > a {display: block; margin: 5px 0; background: url("../img/ic_more_white_48dp.png") 50% 0 no-repeat; width: 100%; height: 36px; font-size: 16px; color: white; line-height: 36px; text-indent: 1em; background-size: cover;}
+#article_tags > div {padding: 20px 0; float: right}
+#article_tags > div a {color: #4d4f53}
+#article_tags > div a:hover {color: #2196f3}
+#article_tags i {padding: 5px; display: block}
