@@ -16,6 +16,11 @@
 	
 	
 	<package name="default" namespace="/" extends="struts-default">
+		
+		<interceptors>
+			<interceptor name="adminLoginInterceptor" class="com.news.interceptor.AdminLoginInterceptor"></interceptor>
+		</interceptors>
+		
 		<action name="index" class="newsInfoAction" method="index">  
             <result name="index">/index.jsp</result>
         </action>
@@ -31,6 +36,9 @@
         <action name="adminLogin" class="adminAction" method="validateLogin">  
            <!--  <result name="index" type="redirectAction">index</result> -->
             <result name="index" type="redirect">/admin/admin.jsp</result>
+            <result name="login" >/login.jsp</result>
+            <interceptor-ref name="defaultStack"></interceptor-ref>
+            <interceptor-ref name="adminLoginInterceptor"></interceptor-ref>
         </action>
         <action name="addNews" class="newsInfoAction" method="newsAdd">  
             <result name="index">/admin/sub_jsp/news_add.jsp</result>

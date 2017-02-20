@@ -51,6 +51,7 @@
 						</div>
 						<div>
 							<input id="save" type="checkbox" /> 保存密码
+							<div style="float: right">${notice}</div>
 						</div>
 					</form>
 				</div>

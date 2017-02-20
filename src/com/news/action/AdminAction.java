@@ -8,6 +8,7 @@ import org.apache.struts2.interceptor.SessionAware;
 
 import com.news.biz.AdminBiz;
 import com.news.entity.Admin;
+import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class AdminAction extends ActionSupport implements RequestAware,SessionAware {
@@ -64,8 +65,11 @@ public class AdminAction extends ActionSupport implements RequestAware,SessionAw
 		List<Admin> list = (List<Admin>) adminBiz.login(admin);
 		if (list.size() > 0) {
 			session.put("admin", list.get(0));
+			return "index";
+		} else {
+			request.put("notice", "用户名/密码不匹配");
+			return "login";
 		}
-		return "index";
 	}
 	
 }

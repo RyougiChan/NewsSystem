@@ -94,7 +94,8 @@
 	<bean id="adminBiz" class="com.news.biz.impl.AdminBizImpl" autowire="byName"></bean>
 	
 	
-	<!-- spring管理的自定义filter -->  
+	<!-- spring管理的自定义filter -->
+	
     
     <!-- spring管理struts2的Action -->
     <bean id="newsInfoAction" class="com.news.action.NewsInfoAction" scope="prototype" autowire="byName"></bean>
