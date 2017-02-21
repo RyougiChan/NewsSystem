@@ -20,11 +20,11 @@ body {height: 100%; background: url("../img/Tsukihime.full.1277383.jpg") no-repe
 	#loginForm {width: 50%; background: #f1f1f1; height: 480px;}
 	#loginForm > form {padding-left: 20%; padding-top: 100px; height: 320px; width: 60%;}
 	#loginForm > form > h1 {font-size: 36px; font-weight: bold; color: rgb(33, 150, 243)}
-	#loginForm > form > p {font-size: 18px; font-weight: bold; margin-top: 10px;}
+	#loginForm > form > p {font-size: 16px; font-weight: bold; margin-top: 10px;}
 	#loginForm > form > div {padding-top: 10px; font-weight: bold; width: 100%}
-	#loginForm > form > div > input {height: 36px; width: 100%; font-size: 18px; font-weight: bold;}
+	#loginForm > form > div > input {height: 36px; width: 100%; font-size: 18px; font-weight: bold; border: none;}
 	#save {width: auto !important; height: auto !important}
-	#submit {background: rgb(33, 150, 243); border: none; width: 120px; height: 28px; }
+	#submit {background: rgb(33, 150, 243); color: white; border: none; width: 120px; height: 28px; }
 	/* main css E */
 	/* footer css S */
 	#footer {width: 100%; height: 120px;}
@@ -33,6 +33,7 @@ body {height: 100%; background: url("../img/Tsukihime.full.1277383.jpg") no-repe
 
 /* login_succed css S */
 .notice {width: 100%; text-align: center; font-size: 72px; font-weight: bold; }
+#alert {margin: 1em 0; color: red; border: 2px dashed red;}
 /* login_succed css E */
 
 /* login_failed css S */

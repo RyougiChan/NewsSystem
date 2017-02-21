@@ -40,11 +40,11 @@
 		<div id="right_form">
 			<h1>管理员档案</h1>
 			<ul>
-				<li class="admin_account"><div>登录账号${sessionScope.admin.loginName}</div></li>
-				<li class="admin_group"><div>用户组别</div></li>
-				<li class="true_name"><div>真实姓名</div></li>
-				<li class="login_time"><div>登录时间</div></li>
-				<li class="login_ip"><div>登录IP</div></li>
+				<li><span class="admin_account"></span><div><p>登录账号</p><p>${admin.loginName}</p></div></li>
+				<li><span class="admin_group"></span><div>用户组别</div></li>
+				<li><span class="true_name"></span><div>真实姓名</div></li>
+				<li><span class="login_time"></span><div>登录时间</div></li>
+				<li><span class="login_ip"></span><div>登录IP</div></li>
 			</ul>
 		</div>
 	</div>

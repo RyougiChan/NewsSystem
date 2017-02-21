@@ -32,6 +32,9 @@
 						<div>2 If you have your account but forget your password.
 							Click link below to recover your password.</div>
 						<br> <a href="">>>>Recover your password<<<</a>
+						<div id="alert">
+								${notice}
+						</div>
 					</div>
 				</div>
 				<div id="loginForm">
@@ -47,11 +50,10 @@
 							<input id="loginPwd" name="loginPwd" type="password" />
 						</div>
 						<div>
-							<input type="submit" name="submit" id="submit" />
+							<input type="submit" name="submit" id="submit" value="submit" />
 						</div>
 						<div>
-							<input id="save" type="checkbox" /> 保存密码
-							<div style="float: right">${notice}</div>
+							<input id="save" type="checkbox" /> Save password
 						</div>
 					</form>
 				</div>
