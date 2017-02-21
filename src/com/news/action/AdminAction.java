@@ -13,7 +13,11 @@ import org.apache.struts2.interceptor.RequestAware;
 import org.apache.struts2.interceptor.SessionAware;
 
 import com.news.biz.AdminBiz;
+import com.news.biz.NewsInfoBiz;
+import com.news.biz.TopicBiz;
 import com.news.entity.Admin;
+import com.news.entity.NewsInfo;
+import com.news.entity.Pager;
 import com.news.util.AdminUtil;
 import com.opensymphony.xwork2.ActionSupport;
 
@@ -22,6 +26,11 @@ public class AdminAction extends ActionSupport implements RequestAware,SessionAw
 	Map<String, Object> request;
 	Map<String, Object> session;
 	AdminBiz adminBiz;
+	NewsInfo newsInfo;
+	TopicBiz topicBiz;
+	NewsInfoBiz newsInfoBiz;
+	Pager pager;
+	
 	private String loginName;
 	private String loginPwd;
 	
@@ -48,6 +57,38 @@ public class AdminAction extends ActionSupport implements RequestAware,SessionAw
 	public void setAdminBiz(AdminBiz adminBiz) {
 		this.adminBiz = adminBiz;
 	}
+	
+	public NewsInfo getNewsInfo() {
+		return newsInfo;
+	}
+
+	public void setNewsInfo(NewsInfo newsInfo) {
+		this.newsInfo = newsInfo;
+	}
+
+	public TopicBiz getTopicBiz() {
+		return topicBiz;
+	}
+
+	public void setTopicBiz(TopicBiz topicBiz) {
+		this.topicBiz = topicBiz;
+	}
+
+	public NewsInfoBiz getNewsInfoBiz() {
+		return newsInfoBiz;
+	}
+
+	public void setNewsInfoBiz(NewsInfoBiz newsInfoBiz) {
+		this.newsInfoBiz = newsInfoBiz;
+	}
+
+	public Pager getPager() {
+		return pager;
+	}
+
+	public void setPager(Pager pager) {
+		this.pager = pager;
+	}
 
 	public String getLoginName() {
 		return loginName;
@@ -68,12 +109,33 @@ public class AdminAction extends ActionSupport implements RequestAware,SessionAw
 	@SuppressWarnings("unchecked")
 	public String validateLogin() throws Exception {
 		
+		int curPage = 1;
+		Pager pager8 = null;
+		List<NewsInfo> newsInfos8 = null;
+		
 		Admin admin = new Admin(loginName, loginPwd);
 		List<Admin> list = (List<Admin>) adminBiz.login(admin);
 		HttpServletRequest req = ServletActionContext.getRequest();
 		DateFormat df = new SimpleDateFormat("MM/dd/yyyy");
 		
 		if (list.size() > 0) {
+			if (pager != null) {
+				curPage = pager.getCurPage();
+			}
+			
+			if (newsInfo == null) {
+				pager = newsInfoBiz.getPagerOfAllNewsInfo(8);
+				newsInfos8 = (List<NewsInfo>) newsInfoBiz.getAllNewsInfoByPage(curPage, 8);
+			} else {
+				pager = newsInfoBiz.getPagerOfNewsInfo(newsInfo, 8);
+				newsInfos8 = (List<NewsInfo>) newsInfoBiz.getNewsInfoByConditionAndPage(newsInfo, curPage, 8);
+			}
+			pager8 = pager;
+			pager8.setCurPage(curPage);
+			session.put("topicList", topicBiz.getAllTopics());
+			session.put("newsInfoList8", newsInfos8);
+			session.put("pager8", pager8);
+			session.put("loaded", "success");
 			session.put("admin", list.get(0));
 			session.put("ip", AdminUtil.getIpAddr(req));
 			session.put("time", df.format(new Date()));

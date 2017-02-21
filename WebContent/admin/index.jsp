@@ -8,7 +8,7 @@
         <title>内容管理系统</title>
         <link type="text/css" rel="stylesheet" href="../css/global.css" />
     </head>
-    <frameset rows="60, *" frameborder="no">
+    <frameset rows="60, *, 30" frameborder="no">
         <frame src="top.jsp" />
         <frameset cols="240, *" frameborder="no">
             <frame src="left.jsp" />

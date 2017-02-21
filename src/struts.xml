@@ -25,7 +25,10 @@
             <result name="index">/index.jsp</result>
         </action>
         <action name="newsread" class="newsInfoAction" method="newsRead">  
-            <result name="news_read">/new_read.jsp</result>
+            <result name="news_read">/news_read.jsp</result>
+        </action>
+        <action name="newsscan" class="newsInfoAction" method="newsRead">  
+            <result name="news_read">/admin/sub_jsp/news_scan.jsp</result>
         </action>
         <action name="newsedit" class="newsInfoAction" method="newsEdit">  
             <result name="news_edit">/admin/sub_jsp/news_edit.jsp</result>
