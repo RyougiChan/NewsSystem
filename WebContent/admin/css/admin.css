@@ -2,6 +2,7 @@ a {color: #010101}
 /* Top CSS Start */
 #top_container {width: 100%; height: 100%; background: rgba(255, 255, 255, 0.8);}
 #banner_logo {width:200px; height: 60px; background: url(../../img/ryougi_logo.png) no-repeat 50% 60%; background-size: 80%; float: left;     margin-left: 40px;}
+#banner_logo > a {display: block; width: 100%; height: 60px;}
 .banner_contact {width: 100%; height: 30px; line-height: 30px; text-align: right; font-size: 16px; font-style: normal; color: #010101;}
 
 /* Left CSS Start */

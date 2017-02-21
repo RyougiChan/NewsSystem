@@ -106,7 +106,7 @@ public class NewsInfoAction extends ActionSupport implements RequestAware, Sessi
 		pager.setCurPage(curPage);
 		session.put("newsInfoList", newsInfos);
 		session.put("topicList", topicBiz.getAllTopics());
-		session.put("loaded", "success");
+		request.put("loaded", "success");
 		
 		return "index";
 	}

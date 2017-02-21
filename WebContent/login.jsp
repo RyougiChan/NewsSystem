@@ -66,6 +66,7 @@
 		<!-- Footer E -->
 	</div>
 	<script src="js/jquery-3.1.0.js"></script>
+	<script type="text/javascript" src="js/global.js"></script>
 	<script>
 		$("#main").css("height", window.innerHeight - 300);
 		$(window).resize(function() {

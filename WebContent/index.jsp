@@ -5,7 +5,8 @@
 <html>
 <head>
 <meta charset="UTF-8" />
-<title>Reconstruction</title>
+<title>新闻发布系统</title>
+
 </head>
 <link type="text/css" rel="stylesheet" href="css/ryougi_css.css" />
 <link type="text/css" rel="stylesheet" href="css/global.css" />
@@ -65,7 +66,7 @@
 						<ul>
 							<s:iterator id="news" value="#session.newsInfoList">
 								<li><a href="newsread?id=${news.id}"><b>❅ </b>
-											${news.title} <span><s:date name="%{#news.createDate}" format="MM-dd-yyyy" /></span></a>  </li>
+											${news.title} <span><s:date name="%{#news.createDate}" format="MM/dd/yyyy" /></span></a>  </li>
 							</s:iterator>
 						</ul>
 					</s:form>
@@ -102,39 +103,21 @@
 		</div>
 	</div>
 	<script type="text/javascript" src="js/jquery-3.1.0.js"></script>
+	<script type="text/javascript" src="js/global.js"></script>
 	<script type="text/javascript" src="js/ryougi_js.js"></script>
 	<script type="text/javascript" src="js/ryougi_bg.js"></script>
 	<script>
- 	$(document).ready(function () {
-		var yetVisited = localStorage['visited'];
-	    if (!yetVisited) {
-	    	$("#indexForm").submit();
-	        localStorage['visited'] = "yes";
-	    }
-	});
+
+		(function(){
+			var yetVisited = <%=request.getAttribute("loaded")%>;
+		    if (!yetVisited) {
+		    	$("#indexForm").submit();
+ 		    	/* $.post('index',$('#indexForm').serialize(),function(data){
+ 		    		console.log(data);
+ 		    	}); */
+		    }
+		})();
 	
-	/* $(window).on("unload", function(){
-		localStorage.removeItem('visited');
-		$("#indexForm").submit();
-	}); */
-	
-	window.onbeforeunload = function()
-	{
-	  var n = window.event.screenX - window.screenLeft;
-	  var b = n > document.documentElement.scrollWidth-20;
-	  if(b && window.event.clientY < 0 || window.event.altKey)
-	    {
-		  console.log("关闭");
-		  localStorage.removeItem('visited');
-	    }
-	  else
-	    {
-		  	$("#indexForm").submit();
-	    	console.log("刷新");
-	    }
-	 
-	}
-    
 	</script>
 </body>
 </html>

@@ -23,6 +23,8 @@
             Copyright © <a href="">RyougiChan</a>  &nbsp; | &nbsp; Technic: <a href="">RyougiChan </a> <a href="">Management</a>
         </div>
     </div>
+    <script src="../../js/jquery-3.1.0.js"></script>
+    <script src="../../js/global.js"></script>
 </body>
 
 </html>
