@@ -12,6 +12,9 @@ a {color: #010101}
 /* Right CSS Start */
 #right_container {width: calc(100% - 90px); height: calc(100% - 60px); background: rgba(255, 255, 255, 0.8); position: absolute; left: 30px; top: 30px;}
 #right_form {padding: 20px; width: calc(35% - 80px);}
+#right_form p {padding-left: 1em;height: 30px; line-height: 30px;}
+#right_form p:first-child {font-weight: bold; font-size: 16px;}
+#right_form p:last-child {font-weight: italic; font-size: 16px;}
 #right_form > h1 {font-size: 28px; font-weight: bold; color: rgb(33, 150, 243); padding: 10px;}
 #right_form > ul {padding: 10px; width: 100%;}
 #right_form > ul > li {margin: 10px 0;}

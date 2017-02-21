@@ -35,7 +35,7 @@
         </action>
         <action name="adminLogin" class="adminAction" method="validateLogin">  
            <!--  <result name="index" type="redirectAction">index</result> -->
-            <result name="index" type="redirect">/admin/admin.jsp</result>
+            <result name="index" type="redirect">/admin/index.jsp</result>
             <result name="login" >/login.jsp</result>
         </action>
         <action name="addNews" class="newsInfoAction" method="newsAdd">  

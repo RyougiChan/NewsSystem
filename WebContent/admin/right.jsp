@@ -41,10 +41,10 @@
 			<h1>管理员档案</h1>
 			<ul>
 				<li><span class="admin_account"></span><div><p>登录账号</p><p>${admin.loginName}</p></div></li>
-				<li><span class="admin_group"></span><div>用户组别</div></li>
-				<li><span class="true_name"></span><div>真实姓名</div></li>
-				<li><span class="login_time"></span><div>登录时间</div></li>
-				<li><span class="login_ip"></span><div>登录IP</div></li>
+				<li><span class="admin_group"></span><div><p>用户组别</p><p></p></div></li>
+				<li><span class="true_name"></span><div><p>真实姓名</p><p></p></div></li>
+				<li><span class="login_time"></span><div><p>登录时间</p><p>${time}</p></div></li>
+				<li><span class="login_ip"></span><div><p>登录IP</p><p>${ip}</p></div></li>
 			</ul>
 		</div>
 	</div>

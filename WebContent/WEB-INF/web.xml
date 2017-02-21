@@ -26,7 +26,7 @@
 	
 	<filter-mapping>
 		<filter-name>adminFilter</filter-name>
-		<url-pattern>/admin/sub_jsp/*</url-pattern>
+		<url-pattern>/admin/*</url-pattern>
 	</filter-mapping>
 
 	<!-- 配置CharacterEncoding，设置字符集 -->

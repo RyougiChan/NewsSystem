@@ -1,14 +1,20 @@
 package com.news.action;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
+import javax.servlet.http.HttpServletRequest;
+
+import org.apache.struts2.ServletActionContext;
 import org.apache.struts2.interceptor.RequestAware;
 import org.apache.struts2.interceptor.SessionAware;
 
 import com.news.biz.AdminBiz;
 import com.news.entity.Admin;
-import com.opensymphony.xwork2.ActionContext;
+import com.news.util.AdminUtil;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class AdminAction extends ActionSupport implements RequestAware,SessionAware {
@@ -61,13 +67,19 @@ public class AdminAction extends ActionSupport implements RequestAware,SessionAw
 
 	@SuppressWarnings("unchecked")
 	public String validateLogin() throws Exception {
+		
 		Admin admin = new Admin(loginName, loginPwd);
 		List<Admin> list = (List<Admin>) adminBiz.login(admin);
+		HttpServletRequest req = ServletActionContext.getRequest();
+		DateFormat df = new SimpleDateFormat("MM/dd/yyyy");
+		
 		if (list.size() > 0) {
 			session.put("admin", list.get(0));
+			session.put("ip", AdminUtil.getIpAddr(req));
+			session.put("time", df.format(new Date()));
 			return "index";
 		} else {
-			request.put("notice", "用户名/密码不匹配");
+			request.put("notice", "Account/Password is mismatched");
 			return "login";
 		}
 	}
