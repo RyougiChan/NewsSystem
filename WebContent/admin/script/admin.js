@@ -9,40 +9,43 @@
 				$('#page-content').text('Page ' + page);
 			}
 		});
-
-		if ($.session.get('delete') === "success") {
-			window.prompt("删除成功");
-		}
-
 	})
-	
-	$("#topicName").bind("focusout", function () {
-		$("#topicName").attr("disabled", "disabled");
-		var renew_name = $('#topicName').val();
-		var renew_id = $('#topicId').val();
-		var jsp = "sub_jsp/topic_manage.jsp/topicUpdate?id=" + renew_id;
-		var flag = window.confirm("确认修改主题: "+renew_name+"?");
-		if (flag) {
-			window.location.href = jsp;
-		}
-	});
 	
 })()
 
 function deleteNews(arg) {
 	var flag = window.confirm("确认删除?");
-	var jsp = "sub_jsp/news_manage.jsp/newsdelete?id=" + arg;
+	var jsp = "newsdelete?id=" + arg;
 	if (flag) {
 		window.location.href = jsp;
+		window.event.returnValue=false;
 	}
 }
 
-function editTopic(arg) {
-	console.log("click");
-	$("#topicName").removeAttr("disabled");
-	$("#topicName").focus();
+function editTopic(arg0, arg1) {
+	$arg1 = $(arg1);
+	$topicName = $arg1.parent().siblings().children('.topicName');
+	$topicName.removeAttr('disabled');
+	$topicName.focus();
+}
+
+function updateTopic(arg0, arg1) {
+	$arg1 = $(arg1);
+	var new_val = $(arg1).val();
+	$arg1.attr("disabled", "disabled");
+	var jsp = "topicupdate?id=" + arg0 +"&newTopic=" + new_val;
+	var flag = window.confirm("确认修改主题?");
+	if (flag) {
+		window.location.href = jsp;
+		window.event.returnValue=false;
+	}
 }
 
 function deleteTopic(arg) {
 	var flag = window.confirm("确认删除?");
+	var jsp = "topicdelete?id=" + arg;
+	if (flag) {
+		window.location.href = jsp;
+		window.event.returnValue=false;
+	}
 }

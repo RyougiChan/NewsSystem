@@ -6,10 +6,10 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>${newsInfo.title}</title>
-<link type="text/css" rel="stylesheet" href="../css/ryougi_css.css" />
-<link type="text/css" rel="stylesheet" href="../css/global.css" />
-<link type="text/css" rel="stylesheet" href="../css/font-awesome.min.css" />
-<link type="text/css" rel="stylesheet" href="css/admin.css" />
+<link type="text/css" rel="stylesheet" href="../../css/ryougi_css.css" />
+<link type="text/css" rel="stylesheet" href="../../css/global.css" />
+<link type="text/css" rel="stylesheet" href="../../css/font-awesome.min.css" />
+<link type="text/css" rel="stylesheet" href="../css/admin.css" />
 </head>
 <body>
 	<div id="right_container">

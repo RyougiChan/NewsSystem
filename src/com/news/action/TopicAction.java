@@ -1,11 +1,13 @@
 package com.news.action;
 
+import java.util.List;
 import java.util.Map;
 
 import org.apache.struts2.interceptor.RequestAware;
 import org.apache.struts2.interceptor.SessionAware;
 
 import com.news.biz.TopicBiz;
+import com.news.entity.NewsInfo;
 import com.news.entity.Topic;
 import com.opensymphony.xwork2.ActionSupport;
 
@@ -15,8 +17,25 @@ public class TopicAction extends ActionSupport implements RequestAware, SessionA
 	TopicBiz topicBiz;
 	Map<String, Object> request;
 	Map<String, Object> session;
+	String newTopic;
+	int id;
 	
-	
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getNewTopic() {
+		return newTopic;
+	}
+
+	public void setNewTopic(String newTopic) {
+		this.newTopic = newTopic;
+	}
+
 	public Topic getTopic() {
 		return topic;
 	}
@@ -49,18 +68,28 @@ public class TopicAction extends ActionSupport implements RequestAware, SessionA
 		this.session = session;
 	}
 
+	@SuppressWarnings("unchecked")
 	public String topicQuery() throws Exception {
-		Topic t = topicBiz.getTopicByCondition(topic);
-		request.put("topic", t);
+		List<Topic> topics;
+		if (topic == null) {
+			topics = (List<Topic>) topicBiz.getAllTopics();
+		} else {
+			topics = (List<Topic>) topicBiz.getTopicByCondition(topic);
+		}
+		request.put("topicList", topics);
 		return "topic_query";
 	}
 	
 	public String topicUpdate() throws Exception {
+		Topic topic = new Topic();
+		topic.setId(id);
+		topic.setName(newTopic);
 		topicBiz.updateTopic(topic);
 		return "topic_update";
 	}
 	
 	public String topicDelete() throws Exception {
+		Topic topic = topicBiz.getTopicByid(id);
 		topicBiz.deleteTopic(topic);
 		request.put("delete", "success");
 		return "topic_delete";

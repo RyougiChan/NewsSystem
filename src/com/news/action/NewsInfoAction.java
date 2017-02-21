@@ -118,10 +118,19 @@ public class NewsInfoAction extends ActionSupport implements RequestAware, Sessi
 	}
 	
 	public String newsEdit() throws Exception {
+		newsInfo = newsInfoBiz.getNewsInfoById(id);
+		Admin admin = (Admin) session.get("admin");
+		newsInfo.setAuthor(admin.getLoginName());
+		request.put("newsInfo", newsInfo);
+		return "news_edit";
+	}
+	
+	public String newsModify() {
 		Admin admin = (Admin) session.get("admin");
 		newsInfo.setAuthor(admin.getLoginName());
 		newsInfoBiz.updateNews(newsInfo);
-		return "news_edit";
+		request.put("newsInfo", newsInfo);
+		return "news_modify";
 	}
 	
 	public String newsDelete() throws Exception {

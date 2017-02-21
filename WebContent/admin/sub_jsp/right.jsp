@@ -7,8 +7,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>内容管理系统</title>
-<link type="text/css" rel="stylesheet" href="../css/global.css" />
-<link type="text/css" rel="stylesheet" href="css/admin.css" />
+<link type="text/css" rel="stylesheet" href="../../css/global.css" />
+<link type="text/css" rel="stylesheet" href="../css/admin.css" />
 </head>
 <body>
 	<div id="right_container">
@@ -47,8 +47,8 @@
 			</ul>
 		</div>
 	</div>
-	<script type="text/javascript" src="../js/jquery-3.1.0.js"></script>
-	<script type="text/javascript" src="../js/jquery.twbsPagination.min.js"></script>
-	<script type="text/javascript" src="script/admin.js"></script>
+	<script type="text/javascript" src="../../js/jquery-3.1.0.js"></script>
+	<script type="text/javascript" src="../../js/jquery.twbsPagination.min.js"></script>
+	<script type="text/javascript" src="../script/admin.js"></script>
 </body>
 </html>

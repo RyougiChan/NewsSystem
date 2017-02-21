@@ -14,11 +14,12 @@
 
 	<div id="right_container">
 		<div id="right_form">
-			<h1>添加新闻</h1>
-			<form action="addNews" method="POST">
+			<h1>编辑新闻</h1>
+			<form action="newsmodify?id=${newsInfo.id}" method="POST">
+				<input type="hidden" name="newsInfo.id" value="${newsInfo.id}" />
 				<div id="title">
 					<div class="label">标题</div>
-					<input type="text" name="newsInfo.title" value="%{#request.newsInfo.title}" /><b> *</b>
+					<input type="text" name="newsInfo.title" value="${newsInfo.title}" /><b> *</b>
 				</div>
 				<div id="topic">
 					<div class="label">主题</div>
@@ -32,10 +33,10 @@
 				<div id="content">
 					<div class="label">内容</div>
 					<textarea name="newsInfo.content" id="contentBox" cols="100"
-						rows="10">${newsInfo.content}</textarea>
+						rows="15">${newsInfo.content}</textarea>
 				</div>
 				<div>
-					<input id="submitBtn" class="inputBtn" type="submit" value="添加" />
+					<input id="submitBtn" class="inputBtn" type="submit" value="提交修改" />
 				</div>
 			</form>
 		</div>

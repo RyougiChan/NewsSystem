@@ -6,8 +6,8 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>后台管理</title>
-    <link type="text/css" rel="stylesheet" href="../css/global.css" />
-    <link type="text/css" rel="stylesheet" href="css/admin.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/global.css" />
+    <link type="text/css" rel="stylesheet" href="../css/admin.css" />
 </head>
 
 <body>

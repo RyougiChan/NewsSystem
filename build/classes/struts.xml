@@ -33,6 +33,9 @@
         <action name="newsedit" class="newsInfoAction" method="newsEdit">  
             <result name="news_edit">/admin/sub_jsp/news_edit.jsp</result>
         </action>
+        <action name="newsmodify" class="newsInfoAction" method="newsModify">  
+            <result name="news_modify">/admin/sub_jsp/news_edit.jsp</result>
+        </action>
         <action name="newsdelete" class="newsInfoAction" method="newsDelete">  
             <result name="news_delete">/admin/sub_jsp/news_manage.jsp</result>
         </action>
@@ -50,10 +53,10 @@
         <action name="queryTopic" class="topicAction" method="topicQuery">  
             <result name="topic_query">/admin/sub_jsp/topic_manage.jsp</result>
         </action>
-        <action name="updateTopic" class="topicAction" method="topicUpdate">  
+        <action name="topicupdate" class="topicAction" method="topicUpdate">  
             <result name="topic_update">/admin/sub_jsp/topic_manage.jsp</result>
         </action>
-        <action name="deleteTopic" class="topicAction" method="topicDelete">  
+        <action name="topicdelete" class="topicAction" method="topicDelete">  
             <result name="topic_delete">/admin/sub_jsp/topic_manage.jsp</result>
         </action>
         

@@ -18,12 +18,12 @@
 					<p>主题</p>
 					<p>操作</p>
 				</li>
-				<s:iterator id="topic" value="#session.topicList">
+				<s:iterator id="item" value="#session.topicList">
 					<li><p>
-							<input id="topicName" name="topic.id" value="${topic.name}" type="text" disabled />
-							<input id="topicId" value="${topic.id}" type="hidden"/>
+							<input class="topicName" name="topic.name" value="${item.name}" type="text" disabled onblur="updateTopic(${item.id}, this)" />
+							<input class="topicId" value="${item.id}" type="hidden"/>
 						</p>
-						<p><a onclick="editTopic(${topic.id})"> 编辑 </a> <a onclick="deleteTopic(${topic.id})"> 删除 </a></p></li>
+						<p><a onclick="editTopic(${item.id}, this)"> 编辑 </a> <a onclick="deleteTopic(${item.id})"> 删除 </a></p></li>
 				</s:iterator>
 			</ul>
 			<div id="list_nav">

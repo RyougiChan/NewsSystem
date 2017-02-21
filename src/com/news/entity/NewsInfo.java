@@ -20,12 +20,12 @@ public class NewsInfo implements java.io.Serializable {
 	public NewsInfo() {
 	}
 
-	public NewsInfo(Topic topic, String title, String author, Date createDate,
+	public NewsInfo(Topic topic, String title, String author, String summary,
 			String content) {
 		this.topic = topic;
 		this.title = title;
 		this.author = author;
-		this.createDate = createDate;
+		this.summary = summary;
 		this.content = content;
 	}
 

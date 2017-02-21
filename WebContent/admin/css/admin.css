@@ -22,6 +22,7 @@ a {color: #010101}
 #right_form > ul > li > span {display: block; float: left; width: 60px; height: 60px; background-size: cover;}
 #right_form > form div {font-size: 14px; font-weight: bold; padding: 5px; }
 input, textarea, select {border: none; background: rgba(255,255,255,0.8); padding: 5px;}
+#title > input {width: 707px}
 b {font-size: 18px; font-weight: bold; color: red;}
 #summary {height: 90px; line-height: 90px;}
 #submitBtn {width: 108px; height: 48px;}

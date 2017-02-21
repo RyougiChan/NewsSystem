@@ -22,13 +22,13 @@
 				</li>
 				<s:iterator id="news" value="#session.newsInfoList8">
 					<li><p id="title">
-							<a href="newsread?id=${news.id}"> ${news.title}</a>
+							<a href="newsscan?id=${news.id}"> ${news.title}</a>
 						</p>
 						<p><s:date name="%{#news.createDate}" format="MM/dd/yyyy" /></p>
 						<p>已审核</p>
 						<p id="operation">
-							<a href="newsedit?id=${news.id}">编辑</a> <a href=""
-								onclick="deleteNews(${news.id})"> 删除</a>
+							<a href="newsedit?id=${news.id}">编辑</a> <a 
+								onclick="deleteNews(${news.id})" href=""> 删除</a>
 						</p></li>
 				</s:iterator>
 			</ul>

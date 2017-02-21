@@ -9,10 +9,10 @@
         <link type="text/css" rel="stylesheet" href="../css/global.css" />
     </head>
     <frameset rows="60, *, 30" frameborder="no">
-        <frame src="top.jsp" />
+        <frame src="sub_jsp/top.jsp" />
         <frameset cols="240, *" frameborder="no">
-            <frame src="left.jsp" />
-            <frame src="right.jsp" name="right" />
+            <frame src="sub_jsp/left.jsp" />
+            <frame src="sub_jsp/right.jsp" name="right" />
         </frameset>
     </frameset>
     </html>

@@ -19,7 +19,7 @@ public class TopicBizImpl implements TopicBiz {
 	}
 
 	@Override
-	public Topic getTopicByCondition(Topic topic) {
+	public List<?> getTopicByCondition(Topic topic) {
 		return topicDAO.getTopicByCondition(topic);
 	}
 
@@ -31,6 +31,11 @@ public class TopicBizImpl implements TopicBiz {
 	@Override
 	public void deleteTopic(Topic topic) {
 		topicDAO.deleteTopic(topic);
+	}
+
+	@Override
+	public Topic getTopicByid(int id) {
+		return topicDAO.getTopicById(id);
 	}
 
 }

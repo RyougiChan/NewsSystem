@@ -5,6 +5,8 @@ import java.util.List;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.criterion.Example;
+import org.hibernate.criterion.MatchMode;
 import org.hibernate.criterion.Restrictions;
 
 import com.news.dao.TopicDAO;
@@ -24,11 +26,21 @@ public class TopicDAOImpl implements TopicDAO {
 	}
 
 	@Override
-	public Topic getTopicByCondition (Topic topic) {
+	public List<?> getTopicByCondition (Topic topic) {
 		Session session = sessionFactory.getCurrentSession();
 		Criteria c = session.createCriteria(Topic.class);
-		c.add(Restrictions.eq("topic.name", topic.getName()));
-		return (Topic) c.list().get(0);
+		if (topic != null) {
+			if (topic.getName() != null && !"".equals(topic.getName())) {
+				c.add(Restrictions.like("name", topic.getName(), MatchMode.ANYWHERE));
+			}
+		}
+		return c.list();
+	}
+
+	@Override
+	public Topic getTopicById(int id) {
+		Session session = sessionFactory.getCurrentSession();
+		return (Topic) session.get(Topic.class, id);
 	}
 
 	@Override
