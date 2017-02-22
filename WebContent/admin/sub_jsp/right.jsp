@@ -24,7 +24,7 @@
 					<li><p id="title">
 							<a href="newsscan?id=${news.id}"> ${news.title}</a>
 						</p>
-						<p><s:date name="%{#news.createDate}" format="yy-MM-dd" /></p>
+						<p><s:date name="%{#news.createDate}" format="MM/dd/yyyy" /></p>
 						<p>已审核</p>
 						<p id="operation">
 							<a href="newsedit?id=${news.id}">编辑</a> <a href=""
@@ -47,8 +47,25 @@
 			</ul>
 		</div>
 	</div>
+	<input type="hidden" id="pager" value="${session.pager8.totalPage}">
 	<script type="text/javascript" src="../../js/jquery-3.1.0.js"></script>
 	<script type="text/javascript" src="../../js/jquery.twbsPagination.min.js"></script>
 	<script type="text/javascript" src="../script/admin.js"></script>
+	<script>
+	(function(){
+		var totalPage = $('#pager').val();
+		console.log(totalPage);
+	    $(document).ready(function() {
+			$('#pagination').twbsPagination({
+				totalPages : 3,
+				visiblePages : 7,
+				onPageClick : function(event, page) {
+					$('#page-content').text('Page ' + page);
+				}
+			});
+		})
+		
+	})();
+	</script>
 </body>
 </html>

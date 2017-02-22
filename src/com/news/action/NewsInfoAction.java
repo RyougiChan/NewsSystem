@@ -1,5 +1,6 @@
 package com.news.action;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -125,11 +126,14 @@ public class NewsInfoAction extends ActionSupport implements RequestAware, Sessi
 		return "news_edit";
 	}
 	
+	@SuppressWarnings("unchecked")
 	public String newsModify() {
 		Admin admin = (Admin) session.get("admin");
 		newsInfo.setAuthor(admin.getLoginName());
+		newsInfo.setCreateDate(new Date());
 		newsInfoBiz.updateNews(newsInfo);
-		request.put("newsInfo", newsInfo);
+		session.put("newsInfo", newsInfo);
+		session.put("newsInfoList8", (List<NewsInfo>) newsInfoBiz.getAllNewsInfoByPage(1, 8));
 		return "news_modify";
 	}
 	
@@ -137,6 +141,7 @@ public class NewsInfoAction extends ActionSupport implements RequestAware, Sessi
 		NewsInfo newsInfo = newsInfoBiz.getNewsInfoById(id);
 		newsInfoBiz.deleteNews(newsInfo);
 		session.put("delete", "success");
+		session.put("newsInfoList8", (List<NewsInfo>) newsInfoBiz.getAllNewsInfoByPage(1, 8));
 		return "news_delete";
 	}
 	
@@ -170,6 +175,7 @@ public class NewsInfoAction extends ActionSupport implements RequestAware, Sessi
 		pager8.setCurPage(curPage);
 		session.put("newsInfoList8", newsInfos8);
 		session.put("pager8", pager8);
+		request.put("loaded", "success");
 		return "news_query";
 	}
 	

@@ -55,7 +55,7 @@
 #article_body > span {font-size: 1.5em; line-height: 1.5em; display: block; color: #820000; text-transform: uppercase;}
 #article_body > p {text-indent:2em; line-height: 1.5em; font-size: 1.2em;}
 #article_tags {width: 12%; height: 480px; float: left; margin: 36px 0;}
-#article_tags > a {display: block; margin: 5px 0; background: url("../img/ic_more_white_48dp.png") 50% 0 no-repeat; width: 100%; height: 32px; color: white; line-height: 32px; text-indent: 0.6em; background-size: cover;}
+#article_tags > a {display: block; margin: 5px 0; background: url("../img/ic_more_white_48dp.png") 50% 0 no-repeat; width: 100%; height: 32px; color: white; line-height: 32px; text-align:center;     text-indent: -0.5em; background-size: cover;}
 #article_tags > div {padding: 20px 0; float: right}
 #article_tags > div a {color: #4d4f53}
 #article_tags > div a:hover {color: #2196f3}

@@ -82,6 +82,20 @@
 			</div>
 		</div>
 	</div>
-
+	
+	<script type="text/javascript" src="js/jquery-3.1.0.js"></script>
+	<script type="text/javascript" src="js/global.js"></script>
+	<script>
+		$(document).ready(function(){
+			$article_tags_width = $('#article_tags > a').width();
+			$('#article_tags > a').css('height', $article_tags_width/3);
+			$('#article_tags > a').css('line-height', $article_tags_width/3+"px");
+		})
+		$(window).resize(function(){
+			$article_tags_width = $('#article_tags > a').width();
+			$('#article_tags > a').css('height', $article_tags_width/3);
+			$('#article_tags > a').css('line-height', $article_tags_width/3+"px");
+		})
+	</script>
 </body>
 </html>

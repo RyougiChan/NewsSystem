@@ -18,9 +18,9 @@
 				<ul class="banner_nav_level1">
 					<li class="banner_nav_level1_item">り
 						<ul class="banner_nav_level2">
-							<li><a>り</a></li>
-							<li><a>り</a></li>
-							<li><a>り</a></li>
+							<li><a></a></li>
+							<li><a></a></li>
+							<li><a></a></li>
 						</ul>
 					</li>
 					<li class="banner_nav_level1_item">ょ

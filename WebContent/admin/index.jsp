@@ -7,6 +7,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>内容管理系统</title>
         <link type="text/css" rel="stylesheet" href="../css/global.css" />
+        
     </head>
     <frameset rows="60, *, 30" frameborder="no">
         <frame src="sub_jsp/top.jsp" />

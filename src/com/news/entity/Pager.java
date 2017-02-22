@@ -5,15 +5,21 @@ package com.news.entity;
  * @author RyougiChan
  */
 public class Pager {
-	/** 待显示页面 */
+	/** 当前页面 */
 	private int curPage;
 	/** 每页记录数 */
 	private int perPageRows;
 	/** 记录总数目 */
 	private int rowCount;
 	/** 总页数 */
-	private int pageCount;
+	private int totalPage;
 	
+	public int getTotalPage() {
+		return (rowCount + perPageRows - 1) / perPageRows;
+	}
+	public void setTotalPage(int totalPage) {
+		this.totalPage = totalPage;
+	}
 	public int getCurPage() {
 		return curPage;
 	}
@@ -31,12 +37,6 @@ public class Pager {
 	}
 	public void setRowCount(int rowCount) {
 		this.rowCount = rowCount;
-	}
-	public int getPageCount() {
-		return (rowCount + perPageRows - 1) / perPageRows;
-	}
-	public void setPageCount(int pageCount) {
-		this.pageCount = pageCount;
 	}
 	
 }

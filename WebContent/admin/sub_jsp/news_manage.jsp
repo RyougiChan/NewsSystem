@@ -57,5 +57,24 @@
 	<script type="text/javascript"
 		src="../../js/jquery.twbsPagination.min.js"></script>
 	<script type="text/javascript" src="../script/admin.js"></script>
+	<script>
+	(function(){
+		var yetVisited = <%=request.getAttribute("loaded")%>;
+	    if (!yetVisited) {
+			window.location.href = "queryNews";
+	    }
+	    
+	    $(document).ready(function() {
+			$('#pagination').twbsPagination({
+				totalPages : 35,
+				visiblePages : 7,
+				onPageClick : function(event, page) {
+					$('#page-content').text('Page ' + page);
+				}
+			});
+		})
+		
+	})();
+	</script>
 </body>
 </html>

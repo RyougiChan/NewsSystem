@@ -34,7 +34,7 @@
             <result name="news_edit">/admin/sub_jsp/news_edit.jsp</result>
         </action>
         <action name="newsmodify" class="newsInfoAction" method="newsModify">  
-            <result name="news_modify">/admin/sub_jsp/news_edit.jsp</result>
+            <result name="news_modify">/admin/sub_jsp/news_manage.jsp</result>
         </action>
         <action name="newsdelete" class="newsInfoAction" method="newsDelete">  
             <result name="news_delete">/admin/sub_jsp/news_manage.jsp</result>
