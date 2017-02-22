@@ -1,17 +1,12 @@
 ## DEMO IMAGE
 * **Content Manage System index page**
-![doodle](https://github.com/RyougiChan/NewsSystem/blob/master/demo_png/CMS.png) "CMS index page"
+![ryougi](https://github.com/RyougiChan/NewsSystem/blob/master/demo_png/CMS.png "CMS index page")
 * **Website Index page**
-![doodle](https://github.com/RyougiChan/NewsSystem/blob/master/demo_png/index.png "Website index page")
-[doodle-story]: https://github.com/RyougiChan/NewsSystem/blob/master/demo_png/index.png
+![ryougi](https://github.com/RyougiChan/NewsSystem/blob/master/demo_png/index.png "Website index page")
 * **Admin login page**
-[![doodle]][doodle-story]
-[doodle]: https://github.com/RyougiChan/NewsSystem/blob/master/demo_png/login.png "Admin login page"
-[doodle-story]: https://github.com/RyougiChan/NewsSystem/blob/master/demo_png/login.png
+![ryougi](https://github.com/RyougiChan/NewsSystem/blob/master/demo_png/login.png "Admin login page")
 * **News reading page**
-[![doodle]][doodle-story]
-[doodle]: https://github.com/RyougiChan/NewsSystem/blob/master/demo_png/news.png "News reading page"
-[doodle-story]: https://github.com/RyougiChan/NewsSystem/blob/master/demo_png/news.png
+![ryougi](https://github.com/RyougiChan/NewsSystem/blob/master/demo_png/news.png "News reading page")
 
 ## LICENSE
 - This project is license by [Apache License](LICENSE).
