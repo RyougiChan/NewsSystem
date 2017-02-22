@@ -1,4 +1,13 @@
 ![ryougi](https://github.com/RyougiChan/NewsSystem/blob/master/WebContent/img/ryougi_logo.png)
+## ABSTRACT
+- The project provides a JAVA implement of management for artical, including ADD/DELETE/MODIFY operation.
+- Further, this project will be a module of my own independent website.
+
+## TECHNICAL USED
+* **Spring4** + **Hibernate4** + **Struts2**
+* **JAVA** (With jdk version  "1.8.0_91" Java(TM) SE Runtime Environment (build 1.8.0_91-b15))
+* **JavaScript/JQuery**
+* **HTML/JSP + CSS**
 
 ## LICENSE
 - This project is license by [Apache License](LICENSE).
