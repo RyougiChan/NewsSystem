@@ -1,11 +1,8 @@
 ## DEMO IMAGE
 * **Content Manage System index page**
-[![doodle]][doodle-story]
-[doodle]: https://github.com/RyougiChan/NewsSystem/blob/master/demo_png/CMS.png "CMS index page"
-[doodle-story]: https://github.com/RyougiChan/NewsSystem/blob/master/demo_png/CMS.png
+![doodle](https://github.com/RyougiChan/NewsSystem/blob/master/demo_png/CMS.png) "CMS index page"
 * **Website Index page**
-[![doodle]][doodle-story]
-[doodle]: https://github.com/RyougiChan/NewsSystem/blob/master/demo_png/index.png "Website index page"
+![doodle](https://github.com/RyougiChan/NewsSystem/blob/master/demo_png/index.png "Website index page")
 [doodle-story]: https://github.com/RyougiChan/NewsSystem/blob/master/demo_png/index.png
 * **Admin login page**
 [![doodle]][doodle-story]
