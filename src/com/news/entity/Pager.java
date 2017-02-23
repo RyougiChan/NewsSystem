@@ -38,5 +38,11 @@ public class Pager {
 	public void setRowCount(int rowCount) {
 		this.rowCount = rowCount;
 	}
+	@Override
+	public String toString() {
+		return "Pager [curPage=" + curPage + ", perPageRows=" + perPageRows + ", rowCount=" + rowCount + ", totalPage="
+				+ totalPage + "]";
+	}
+	
 	
 }

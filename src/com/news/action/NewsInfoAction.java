@@ -23,8 +23,19 @@ public class NewsInfoAction extends ActionSupport implements RequestAware, Sessi
 	TopicBiz topicBiz;
 	NewsInfoBiz newsInfoBiz;
 	Pager pager;
+	// 客户端参数
 	int id;
+	String reqpage;
+	int curPage = 0;
 	
+	public String getReqpage() {
+		return reqpage;
+	}
+
+	public void setReqpage(String reqpage) {
+		this.reqpage = reqpage;
+	}
+
 	public Map<String, Object> getSession() {
 		return session;
 	}
@@ -89,7 +100,9 @@ public class NewsInfoAction extends ActionSupport implements RequestAware, Sessi
 	 */
 	@SuppressWarnings("unchecked")
 	public String index() throws Exception {
-		int curPage = 1;
+		if (curPage == 0) {
+			curPage = 1;
+		}
 		List<NewsInfo> newsInfos = null;
 		
 		if (pager != null) {
@@ -137,6 +150,7 @@ public class NewsInfoAction extends ActionSupport implements RequestAware, Sessi
 		return "news_modify";
 	}
 	
+	@SuppressWarnings("unchecked")
 	public String newsDelete() throws Exception {
 		NewsInfo newsInfo = newsInfoBiz.getNewsInfoById(id);
 		newsInfoBiz.deleteNews(newsInfo);
@@ -152,10 +166,12 @@ public class NewsInfoAction extends ActionSupport implements RequestAware, Sessi
 		newsInfoBiz.addNews(newsInfo);
 		return "news_add";
 	}
-	
+
 	@SuppressWarnings("unchecked")
 	public String newsQuery() throws Exception {
-		int curPage = 1;
+		if (curPage == 0) {
+			curPage = 1;
+		}
 		Pager pager8 = pager;
 		List<NewsInfo> newsInfos8 = null;
 		
@@ -173,10 +189,18 @@ public class NewsInfoAction extends ActionSupport implements RequestAware, Sessi
 		}
 
 		pager8.setCurPage(curPage);
+		pager8.setTotalPage(pager8.getTotalPage());
+		System.out.println("神TM的调试： "+ pager8.toString());
 		session.put("newsInfoList8", newsInfos8);
 		session.put("pager8", pager8);
 		request.put("loaded", "success");
-		return "news_query";
+		
+		System.out.println("调试："+reqpage);
+		if (reqpage.equals("right")) {
+			return "right";
+		} else {
+			return "news_query";
+		}
 	}
 	
 }

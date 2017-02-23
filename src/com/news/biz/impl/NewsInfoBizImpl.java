@@ -13,12 +13,17 @@ public class NewsInfoBizImpl implements NewsInfoBiz {
 	public void setNewsInfoDAO(NewsInfoDAO newsInfoDAO) {
 		this.newsInfoDAO = newsInfoDAO;
 	}
-	
+	/**
+	 * 获得指定页码page的列表，列表记录为pageSize
+	 */
 	@Override
 	public List<?> getAllNewsInfoByPage(int page, int pageSize) {
 		return newsInfoDAO.getAllNewsInfoByPage(page, pageSize);
 	}
-
+	/**
+	 * 根据分页大小返回分页对象
+	 * @return 分页对象信息
+	 */
 	@Override
 	public Pager getPagerOfAllNewsInfo(int pageSize) {
 		int count = newsInfoDAO.getCountOfAllNewsInfo();

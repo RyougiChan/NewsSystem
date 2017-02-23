@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-2-15 19:28:48 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.news.entity.Admin" table="admin" catalog="newssystem">
+        <id name="id" type="java.lang.Integer">
+            <column name="Id" />
+            <generator class="identity" />
+        </id>
+        <property name="loginName" type="string">
+            <column name="LoginName" length="20" not-null="true">
+                <comment>&#185;&#220;&#192;&#237;&#212;&#177;&#181;&#199;&#194;&#188;&#195;&#251;</comment>
+            </column>
+        </property>
+        <property name="loginPwd" type="string">
+            <column name="LoginPwd" length="50" not-null="true">
+                <comment>&#185;&#220;&#192;&#237;&#212;&#177;&#181;&#199;&#194;&#188;&#195;&#220;&#194;&#235;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

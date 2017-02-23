@@ -10,7 +10,7 @@ public class AdminUtil {
 	 * @param request Http Request
 	 * @return ip
 	 */
-	public static String getIpAddr(HttpServletRequest request) { 
+	public String getIpAddr(HttpServletRequest request) { 
 		
 	       String ip = request.getHeader("x-forwarded-for"); 
 	       if(ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) { 

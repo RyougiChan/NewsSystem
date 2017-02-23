@@ -22,7 +22,8 @@ import com.news.util.AdminUtil;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class AdminAction extends ActionSupport implements RequestAware,SessionAware {
-
+	
+	AdminUtil adminUtil;
 	Map<String, Object> request;
 	Map<String, Object> session;
 	AdminBiz adminBiz;
@@ -34,6 +35,15 @@ public class AdminAction extends ActionSupport implements RequestAware,SessionAw
 	private String loginName;
 	private String loginPwd;
 	
+	
+	public AdminUtil getAdminUtil() {
+		return adminUtil;
+	}
+
+	public void setAdminUtil(AdminUtil adminUtil) {
+		this.adminUtil = adminUtil;
+	}
+
 	public Map<String, Object> getRequest() {
 		return request;
 	}
@@ -105,42 +115,54 @@ public class AdminAction extends ActionSupport implements RequestAware,SessionAw
 	public void setLoginPwd(String loginPwd) {
 		this.loginPwd = loginPwd;
 	}
-
+	
+	/**
+	 * 管理员登陆验证
+	 * @return	返回 Struts2 配置字符串，引导页面跳转
+	 * @throws Exception
+	 */
 	@SuppressWarnings("unchecked")
 	public String validateLogin() throws Exception {
 		
 		int curPage = 1;
 		Pager pager8 = null;
 		List<NewsInfo> newsInfos8 = null;
-		
-		Admin admin = new Admin(loginName, loginPwd);
-		List<Admin> list = (List<Admin>) adminBiz.login(admin);
 		HttpServletRequest req = ServletActionContext.getRequest();
 		DateFormat df = new SimpleDateFormat("MM/dd/yyyy");
-		
+		// 验证数据库是否存在改管理员
+		Admin admin = new Admin(loginName, loginPwd);
+		List<Admin> list = (List<Admin>) adminBiz.login(admin);
+		// 判断管理员权限
 		if (list.size() > 0) {
+			// 取得权限
 			if (pager != null) {
 				curPage = pager.getCurPage();
 			}
-			
 			if (newsInfo == null) {
+				// 指定查询条件为空
 				pager = newsInfoBiz.getPagerOfAllNewsInfo(8);
 				newsInfos8 = (List<NewsInfo>) newsInfoBiz.getAllNewsInfoByPage(curPage, 8);
 			} else {
+				// 存在指定查询条件
 				pager = newsInfoBiz.getPagerOfNewsInfo(newsInfo, 8);
 				newsInfos8 = (List<NewsInfo>) newsInfoBiz.getNewsInfoByConditionAndPage(newsInfo, curPage, 8);
 			}
 			pager8 = pager;
 			pager8.setCurPage(curPage);
+			pager8.setTotalPage(pager8.getTotalPage());
+			System.out.println("调试：--> "+pager8.toString());
+			// 将数据存入请求以供前台获取
 			session.put("topicList", topicBiz.getAllTopics());
 			session.put("newsInfoList8", newsInfos8);
 			session.put("pager8", pager8);
-			session.put("loaded", "success");
+			// CMS 首页显示登录信息
+			request.put("loaded", "success");
 			session.put("admin", list.get(0));
-			session.put("ip", AdminUtil.getIpAddr(req));
+			session.put("ip", adminUtil.getIpAddr(req));
 			session.put("time", df.format(new Date()));
 			return "index";
 		} else {
+			// 未取得管理员权限，驳回，输出提示
 			request.put("notice", "Account/Password is mismatched");
 			return "login";
 		}

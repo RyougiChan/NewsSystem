@@ -59,7 +59,8 @@
 	<script type="text/javascript" src="../script/admin.js"></script>
 	<script>
 	(function(){
-		var yetVisited = <%=request.getAttribute("loaded")%>;
+		var yetVisited = $('#rowCount').val() == 0 ? false : true;
+		console.log("yetVisited"+yetVisited);
 	    if (!yetVisited) {
 			window.location.href = "queryNews";
 	    }

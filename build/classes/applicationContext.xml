@@ -93,6 +93,8 @@
 	<bean id="adminDAO" class="com.news.dao.impl.AdminDAOImpl" autowire="byName"></bean>
 	<bean id="adminBiz" class="com.news.biz.impl.AdminBizImpl" autowire="byName"></bean>
 	
+	<bean id="adminUtil" class="com.news.util.AdminUtil" autowire="byName"></bean>
+	
 	
 	<!-- spring管理的自定义filter -->
 	

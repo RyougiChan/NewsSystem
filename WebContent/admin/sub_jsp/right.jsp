@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="/struts-tags" prefix="s"%>
+<%@ taglib uri="/struts-dojo-tags" prefix="sx"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 
@@ -9,6 +10,7 @@
 <title>内容管理系统</title>
 <link type="text/css" rel="stylesheet" href="../../css/global.css" />
 <link type="text/css" rel="stylesheet" href="../css/admin.css" />
+<sx:head />
 </head>
 <body>
 	<div id="right_container">
@@ -46,22 +48,38 @@
 				<li><span class="login_ip"></span><div><p>登录IP</p><p>${ip}</p></div></li>
 			</ul>
 		</div>
+		<sx:a>Test</sx:a>
+		<sx:a href="xxx">Test</sx:a>
+		<sx:a href="xxx" targets="s">Test</sx:a>
 	</div>
-	<input type="hidden" id="pager" value="${session.pager8.totalPage}">
+	<input type="hidden" id="totalPages" value="${session.pager8.totalPage}">
+	<input type="hidden" id="rowCount" value="${session.pager8.rowCount}">
 	<script type="text/javascript" src="../../js/jquery-3.1.0.js"></script>
+	<%-- <script type="text/javascript" src="../../js/jquery.twbsPagination.js"></script> --%>
 	<script type="text/javascript" src="../../js/jquery.twbsPagination.min.js"></script>
 	<script type="text/javascript" src="../script/admin.js"></script>
 	<script>
 	(function(){
-		var totalPage = $('#pager').val();
-		console.log(totalPage);
+		var yetVisited = $('#rowCount').val() == 0 ? false : true;
+		console.log("yetVisited --> "+yetVisited);
+	    if (!yetVisited) {
+	    	console.log("神TM执行了");
+			window.location.href = "queryNews?reqpage=right";
+	    }
+	    
 	    $(document).ready(function() {
+	    	// Initial pagination bar
+			var totalPages = $('#totalPages').val();
+	    	console.log("totalPages="+totalPages);
 			$('#pagination').twbsPagination({
-				totalPages : 3,
+				totalPages : totalPages,
 				visiblePages : 7,
 				onPageClick : function(event, page) {
-					$('#page-content').text('Page ' + page);
+					console.log("当前页="+page);
 				}
+			}).on('page',  function(event, page) {
+				console.log("当前页="+page+"listener");
+				window.location.href = "queryNews?reqpage=right&pager.curPage="+page;
 			});
 		})
 		
