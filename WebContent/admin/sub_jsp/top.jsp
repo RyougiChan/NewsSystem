@@ -20,7 +20,7 @@
             Sun Yat-sen University Guangzhou,P.R.China &nbsp; |&nbsp; E-mail: <a href="mailto:ryougi.chan.fire@gmail.com">ryougi.chan.fire@gmail.com</a>
         </div>
         <div class="banner_contact">
-            Copyright © <a href="">RyougiChan</a>  &nbsp; | &nbsp; Technic: <a href="">RyougiChan </a> <a href="">Management</a>
+            Copyright © <a href="https://github.com/RyougiChan" target="_parent">RyougiChan</a>  &nbsp; | &nbsp; Technic: <a href="https://github.com/RyougiChan" target="_parent">RyougiChan </a> <a href="../../login.jsp" target="_parent">Management</a>
         </div>
     </div>
     <script src="../../js/jquery-3.1.0.js"></script>

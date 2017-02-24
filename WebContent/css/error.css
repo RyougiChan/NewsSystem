@@ -1,0 +1,11 @@
+body {background: #f2f1eb; height: 100%;}
+#error_container {width: 70%; position: absolute; top:calc(50% - 200px); margin: 0 15%;}
+#logo {float: left; width:400px; height: 120px; background: url(../img/ryougi_logo.png) no-repeat 0 50%; background-size: 100%;}
+#notice {padding: 0 20px;}
+#error_container > div > div {padding: 0 20px; height: 120px; line-height: 120px;}
+#error_container a {color: #000000; font-style: italic;}
+#error_container a:hover {color: #2196f3;}
+#error_container b {font-size: 36px;}
+#error_container p {line-height: 48px; font-size: 18px;}
+#error_container span {color: #a0a0a0;}
+#error_container li {line-height: 24px;font-size: 18px;}

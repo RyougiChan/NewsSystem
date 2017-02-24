@@ -3,8 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <title>RRROR 404</title>
+<link type="text/css" rel="stylesheet" href="css/global.css" />
+<link type="text/css" rel="stylesheet" href="css/error.css" />
 </head>
 <body>
-	<center><h1>ERROR 404</h1></center>
+	<div id="error_container">
+		<div><div id="logo"></div>
+		<div><b>404 Not Found</b>. <span> That's an error</span></div></div>
+		<div id="notice">
+			<p>The request URL >> <a id="req_location" href=""></a> << was not found on this server.<span>That's all we know.</span></p>
+			<br><p>Please try the following:</p> 
+			<ol>
+				<li>- If you typed the page address in the address bar, make sure that it's spelled correctly.</li>
+				<li>- Try another link.</li>
+				<li>- Looking for information on the Internet.</li>
+			</ol>
+		</div>
+	</div>
+	<script src="js/jquery-3.1.0.js"></script>
+	<script>
+		$('#req_location').text(location);
+	</script>
 </body>
 </html>
