@@ -48,12 +48,10 @@
 				<li><span class="login_ip"></span><div><p>登录IP</p><p>${ip}</p></div></li>
 			</ul>
 		</div>
-		<sx:a>Test</sx:a>
-		<sx:a href="xxx">Test</sx:a>
-		<sx:a href="xxx" targets="s">Test</sx:a>
 	</div>
 	<input type="hidden" id="totalPages" value="${session.pager8.totalPage}">
 	<input type="hidden" id="rowCount" value="${session.pager8.rowCount}">
+	<input type="hidden" id="curPage" value="${session.pager8.curPage}">
 	<script type="text/javascript" src="../../js/jquery-3.1.0.js"></script>
 	<%-- <script type="text/javascript" src="../../js/jquery.twbsPagination.js"></script> --%>
 	<script type="text/javascript" src="../../js/jquery.twbsPagination.min.js"></script>
@@ -82,7 +80,14 @@
 				window.location.href = "queryNews?reqpage=right&pager.curPage="+page;
 			});
 		})
-		
+		$('#pagination').ready(function() {
+			var $nav_item = $($('#pagination').find('li'));
+			var $cur_active = $($nav_item.get(2));
+			var reset_cur = parseInt($('#curPage').val())+1;
+			var $reset_active = $($nav_item.get(reset_cur));
+			$cur_active.removeClass('active');
+			$reset_active.addClass('active');
+		})
 	})();
 	</script>
 </body>
