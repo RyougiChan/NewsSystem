@@ -198,6 +198,8 @@ public class NewsInfoAction extends ActionSupport implements RequestAware, Sessi
 		System.out.println("调试："+reqpage);
 		if (reqpage.equals("right")) {
 			return "right";
+		} else if (reqpage.equals("edit")) {
+			return "news_edit";
 		} else {
 			return "news_query";
 		}

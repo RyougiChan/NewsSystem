@@ -49,6 +49,7 @@
         </action>
         <action name="queryNews" class="newsInfoAction" method="newsQuery">  
             <result name="news_query">/admin/sub_jsp/news_manage.jsp</result>
+            <result name="news_edit">/admin/sub_jsp/news_manage.jsp</result>
             <result name="right">/admin/sub_jsp/right.jsp</result>
         </action>
         <action name="queryTopic" class="topicAction" method="topicQuery">  

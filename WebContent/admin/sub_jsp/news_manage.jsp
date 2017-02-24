@@ -52,6 +52,9 @@
 			</form>
 		</div>
 	</div>
+	<input type="hidden" id="totalPages" value="${session.pager8.totalPage}">
+	<input type="hidden" id="rowCount" value="${session.pager8.rowCount}">
+	<input type="hidden" id="curPage" value="${session.pager8.curPage}">
 	<script type="text/javascript" src="../../js/jquery-3.1.0.js"></script>
 	<script type="text/javascript" src="../../js/jquerySession.js"></script>
 	<script type="text/javascript"
@@ -60,21 +63,35 @@
 	<script>
 	(function(){
 		var yetVisited = $('#rowCount').val() == 0 ? false : true;
-		console.log("yetVisited"+yetVisited);
+		console.log("yetVisited --> "+yetVisited);
 	    if (!yetVisited) {
-			window.location.href = "queryNews";
+	    	console.log("神TM执行了");
+			window.location.href = "queryNews?reqpage=edit";
 	    }
 	    
 	    $(document).ready(function() {
+	    	// Initial pagination bar
+			var totalPages = $('#totalPages').val();
+	    	console.log("totalPages="+totalPages);
 			$('#pagination').twbsPagination({
-				totalPages : 35,
+				totalPages : totalPages,
 				visiblePages : 7,
 				onPageClick : function(event, page) {
-					$('#page-content').text('Page ' + page);
+					console.log("当前页="+page);
 				}
+			}).on('page',  function(event, page) {
+				console.log("当前页="+page+"listener");
+				window.location.href = "queryNews?reqpage=edit&pager.curPage="+page;
 			});
 		})
-		
+		$('#pagination').ready(function() {
+			var $nav_item = $($('#pagination').find('li'));
+			var $cur_active = $($nav_item.get(2));
+			var reset_cur = parseInt($('#curPage').val())+1;
+			var $reset_active = $($nav_item.get(reset_cur));
+			$cur_active.removeClass('active');
+			$reset_active.addClass('active');
+		})
 	})();
 	</script>
 </body>
