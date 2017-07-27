@@ -11,8 +11,7 @@
 
 ## LICENSE
 - This project is license by [Apache License](LICENSE).
-- The ownership of this project is owned by the [author](https://github.com/RyougiChan). At the same time, it **cannot be used for commercial purposes**.
-In accordance with our narrow understanding (Additional subsidiary terms), **All activities that are profitable are of commercial use**.
+- The ownership of this project is owned by the [author](https://github.com/RyougiChan). All resources in this project are based on [CC BY-NC-SA 4.0 ](https://creativecommons.org/licenses/by-nc-sa/4.0/), that means  you can copy and reissue the contents of this project, but you will also have to provide the **original author information** as well as the **agreement statement**. At the same time, it **cannot be used for commercial purposes**. In accordance with our narrow understanding (Additional subsidiary terms), **All activities that are profitable are of commercial use**.
 
 ## DEMO IMAGE
 * **Content Manage System index page**
