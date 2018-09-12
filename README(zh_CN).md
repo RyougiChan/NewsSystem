@@ -11,7 +11,7 @@
 
 ## 许可
 - 项目由 [Apache License](LICENSE)授权许可。
-- 项目所有权归 [作者](https://github.com/RyougiChan)所有。本项目的所有资源基于 [CC BY-NC-SA 4.0] (https://creativecommons.org/licenses/by-nc-sa/4.0/)。这意味着你可以拷贝、并再发行本项目的内容，但是你将必须同样提供原作者信息以及协议声明。并且，本项目禁止**用于商业目的**。根据我们狭隘的理解(添加附属条款)，**任何涉及盈利的行为均属于商业目的**。
+- 项目所有权归 [作者](https://github.com/RyougiChan)所有。本项目的所有资源基于 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)。这意味着你可以拷贝、并再发行本项目的内容，但是你将必须同样提供原作者信息以及协议声明。并且，本项目禁止**用于商业目的**。根据我们狭隘的理解(添加附属条款)，**任何涉及盈利的行为均属于商业目的**。
 
 ## 效果图
 * **内容管理系统 CMS 首页**
